@@ -16,47 +16,37 @@
 
 <body>
     <header>
-        <section id="intro">
-            <section class="region-izquierda">
-                <article class="logo">
-                    <a href="#">
-                        <img src="../imagenes/logo_claro.png" alt="logo" />
-                    </a>
-                </article>
+        <section id="encabezado">
+            <article class="region-izquierda logo">
+                <a class="imagen-logo" href="#">
+                    <img src="../imagenes/logo_claro.png" alt="logo" />
+                </a>
 
-                <section class="titulo-header">
-                    <article>Clínica Psicológica</article>
-                    <article>Adelante</article>
-                </section>
-            </section>
-
-            <section class="region-derecha">
-                <article class="contacto">
-                    <button class="boton-contacto">¿Hablamos?</button>
-                </article>
-            </section>
+                <div class="texto-logo">
+                    <p>Clínica </p>
+                    <p>Psicológica</p>
+                    <p>Adelante</p>
+                </div>
+            </article>
+            <button class="boton-contacto">¿Hablamos?</button>
         </section>
-
         <section id="navbar">
-            <section class="region-izquierda">
-                <ul class="menu">
-                    <li><a href="#">Terapias Ofrecidas</a></li>
-                    <li><a href="#">Ansiedad</a></li>
-                    <li><a href="#">Depresión</a></li>
-                    <li><a href="#">Trastorno Sexual</a></li>
-                    <li><a href="#">Terapia de Pareja</a></li>
-                </ul>
-            </section>
-            <section class="region-derecha">
-                <ul class="menu">
-                    <li><a href="#">Sobre tu Psicóloga</a></li>
-                    <li><a href="#">Cómo son las Sesiones</a></li>
-                </ul>
-            </section>
+            <article class=" menu nav-terapias">
+                    <a href="#">Terapias Ofrecidas</a>
+                    <a href="#">Ansiedad</a>
+                    <a href="#">Depresión</a>
+                    <a href="#">Trastorno Sexual</a>
+                    <a href="#">Terapia de Pareja</a>
+            </article>
+            <article class="menu nav-psicologa">
+                    <a href="#">Sobre tu Psicóloga</a>
+                    <a href="#">Cómo son las Sesiones</a>
+            </article>
         </section>
     </header>
-    <!--------------------------------------------------------------------------------------------------------->
+    
     <main>
+        <!-- 
         <section id="carousel">
             <section class="diapositivas">
                 <section class="diapositiva">
@@ -104,45 +94,39 @@
                 </div>
             </section>
         </section>
-        <section id="terapeuta_home">
-            <section class="contenedor">
-                <article class="imagen">
-                    <img class="imagen_terapeuta" src="../imagenes/psicologa.png" />
-                </article>
-                <article class="titulo">
-                    <h5>Mari Sol García Martínez</h5>
-                </article>
-                <article id="texto_terapeuta_home" class="texto">
+        -->
+        <section id="terapeuta-home">
+            <h5 class="titulo">Mari Sol García Martínez</h5>
+            <img class="imagen imagen_terapeuta" src="../imagenes/psicologa.png" alt="foto de la psicóloga"/>
+            <article id="texto_terapeuta_home" class="texto">
                     <p>
                         Desde que me gradué en Psicología por la Universidad de Granada he acumulado más de 10 años
                         de
-                        experiencia tratando trastornos psicológicos en adultos.<br /><br />
+                        experiencia tratando trastornos psicológicos en adultos.
+                    </p>
+                    <p>
                         Mi compromiso es ofrecer la garantía de calidad y profesionalidad en las terapias que aplico
                         para garantizar así el mejor tratamiento para mis clientes, por
                         ello sigo la corriente cognitiva-conductual ya que es la que mayor efectividad ha demostrado
                         hoy
-                        día.<br /><br />
+                        día.
+                    </p>
+                    <p> 
                         Me preocupo por crear un entorno seguro y de confianza para mis clientes para que puedan
                         lograr
                         sus objetivos.
                     </p>
-                    <article class="cta">
-                        <button class="boton-contacto">¿Hablamos?</button>
-                    </article>
-                </article>
-            </section>
+            </article>
+            <button class="boton-contacto">¿Hablamos?</button>
         </section>
+
         <section id="contactos_home">
-            <section class="contenedor">
-                <article id="texto_contacto_home">
                     <h5 class="titulo">Contacto</h5>
-                    <div class="formas_contacto">
+                    <article class="formas_contacto">
                         <p class="calle">Calle La Salud Mental s/n</p>
                         <a class="telefono" href="tel:+34777777777">+34 777777777</a>
-                    </div>
-                    <article class="cta">
-                        <button class="boton-contacto">¿Hablamos?</button>
                     </article>
+                    <button class="boton-contacto">¿Hablamos?</button>
                 </article>
                 <article id="mapa_home">
                     <iframe
@@ -150,53 +134,40 @@
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </article>
-            </section>
         </section>
     </main>
-    <!--------------------------------------------------------------------------------------------------------->
+    
     <footer>
-        <section id="logo-footer">
-            <section class="contenedor">
-                <article class="logo">
-                    <a href="#">
-                        <img src="../imagenes/logo_oscuro.png" alt="logo" />
-                    </a>
-                </article>
+        <article class="region-izquierda logo">
+            <a class="imagen-logo" href="#">
+                <img src="fuente/imagenes/logo_oscuro.png" alt="logo" />
+            </a>
 
-                <section class="titulo-header">
-                    <article>Clínica Psicológica</article>
-                    <article>Adelante</article>
-                </section>
-            </section>
-        </section>
-        <section id="contacto-footer">
-            <article class="calle">Calle La Salud Mental s/n</article>
-            <article class="telefono">
-                <a href="tel:+34777777777">+34 777777777</a>
-            </article>
-            <section class="redes">
-                <article>
+            <div class="texto-logo">
+                <p>Clínica </p>
+                <p>Psicológica</p>
+                <p>Adelante</p>
+            </div>
+        </article>
+        <button class="boton-contacto">¿Hablamos?</button>
+        <article id="contacto-footer">
+            <div class="formas_contacto">
+                <p class="calle">Calle La Salud Mental s/n</p>
+                <a class="telefono" href="tel:+34777777777">+34 777777777</a>
+            </div>
+            <div class="redes">
                     <a href="#">
-                        <img src="../imagenes/linkedin.png" alt="" />
+                        <img src="fuente/imagenes/linkedin.png" alt="enlace a cuenta de linkedin" />
                     </a>
-                </article>
-                <article>
                     <a href="#">
-                        <img src="../imagenes/insta.png" alt="" />
+                        <img src="fuente/imagenes/insta.png" alt="enlace a cuenta de instagram" />
                     </a>
-                </article>
-                <article>
+                
                     <a href="#">
-                        <img src="../imagenes/facebook.png" alt="" />
-                    </a>
-                </article>
-            </section>
-        </section>
-        <section id="cta-footer">
-            <article class="contacto">
-                <button class="boton-contacto">¿Hablamos?</button>
-            </article>
-        </section>
+                        <img src="fuente/imagenes/facebook.png" alt="enlace a cuenta de facebook" />
+                     </a>
+                </div>
+        </article>
     </footer>
 </body>
 
