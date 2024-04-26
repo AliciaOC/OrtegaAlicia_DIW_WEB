@@ -1,0 +1,368 @@
+* {
+    font-family: "Comfortaa", sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /*position: fixed;*/
+    flex: 1;
+    background-color: #f9fafa;
+
+}
+
+header #intro {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 30px;
+}
+
+header #intro .region-izquierda {
+    display: flex;
+    align-items: center;
+    width: 66.6666%;
+    padding-left: 30px;
+}
+
+header #intro .region-izquierda .logo img {
+    width: 6vw;
+    height: auto;
+}
+
+header #intro .region-izquierda .titulo-header {
+    color: #31c5b7;
+    padding-left: 24px;
+    font-size: 1.5rem;
+}
+
+header #intro .region-izquierda .titulo-header>div:last-child {
+    text-align: center;
+}
+
+header #intro .region-derecha {
+    width: 33.3333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #navbar {
+    border-top: #031a26 solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header #navbar ul.menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 14px 12px;
+}
+
+/*header #navbar .region-izquierda ul.menu {
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+header #navbar .region-derecha ul.menu {
+    padding-left: 20%;
+}*/
+
+header #navbar ul.menu li {
+    padding: 0 1.5vw;
+}
+
+header #navbar ul.menu li a {
+    text-decoration: none;
+    position: relative;
+    color: #031a26;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+header #navbar ul.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 0;
+    padding: 0 3px;
+    border: 1px solid #31c5b7;
+    opacity: 0;
+    transition: 0.2s all;
+    box-sizing: border-box;
+}
+
+header #navbar ul.menu li a:hover::after {
+    bottom: -3px;
+    opacity: 1;
+}
+
+main {
+    flex: 5;
+    background-color: #f9fafa;
+}
+
+main #carousel {
+    width: 100%;
+    position: relative;
+    background-color: #065f88;
+}
+
+main #carousel .diapositivas .diapositiva {
+    background: url("../imagenes/ansiedad-home.jpg") 0 0 no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+main #carousel .diapositivas .diapositiva .fondo {
+    width: 100%;
+    visibility: hidden;
+}
+
+main #carousel .diapositivas .diapositiva .fondo img {
+    width: 100%;
+}
+
+main #carousel .diapositivas .diapositiva .contenido {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main #carousel .diapositivas .diapositiva .contenido .titulo h5 {
+    margin: 0 0 40px;
+    font-size: 1.75rem;
+    color: #30c5b6;
+}
+
+main #carousel .diapositivas .diapositiva .contenido .texto {
+    padding: 0 100px;
+    margin-bottom: 40px;
+    color: #afe4f3;
+}
+
+.texto p {
+    font-family: "Lexend", sans-serif;
+}
+
+main #carousel .diapositivas .diapositiva .contenido .cta button.boton-contacto {
+    font-size: 1rem;
+    border: none;
+    padding: 12px 24px;
+    background-color: #31c5b7;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+main #carousel .indicadores {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main #carousel .indicadores .contenido {
+    padding: 18px 0;
+}
+
+main #carousel .indicadores ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+main #carousel .indicadores ul li {
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+main #carousel .indicadores ul li.activo {}
+
+main #carousel .indicadores ul li img {
+    width: 24px;
+}
+
+main #terapeuta_home {}
+
+main #terapeuta_home .contenedor {
+    padding: 12%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 17% 83%;
+
+}
+
+main #terapeuta_home .contenedor .imagen {
+    grid-area: 1 / 1 / span 2 / span 1;
+    padding: 0 12px;
+}
+
+main #terapeuta_home .contenedor .imagen img {
+    max-width: 75%;
+    height: auto;
+}
+
+main #terapeuta_home .titulo {
+    font-size: 1.75rem;
+    color: #30c5b6;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+main #terapeuta_home .titulo h5 {
+    margin: 0 auto;
+}
+
+main #terapeuta_home #texto_terapeuta_home .cta {
+    text-align: center;
+}
+
+main #terapeuta_home #texto_terapeuta_home .cta button.boton-contacto {
+    margin-top: 25px;
+}
+
+main #contactos_home {}
+
+main #contactos_home .contenedor {
+    padding: 12%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 17% 83%;
+}
+
+main #contactos_home .contenedor #texto_contacto_home .titulo {
+    font-size: 1.75rem;
+    color: #30c5b6;
+    text-align: center;
+    align-items: center;
+}
+
+main #contactos_home .contenedor #texto_contacto_home .titulo h5 {
+    margin: 0 auto;
+}
+
+main #contactos_home .contenedor #texto_contacto_home .cta {
+    text-align: center;
+}
+
+main #contactos_home .contenedor #texto_contacto_home .cta button.boton-contacto {
+    margin-top: 25px;
+}
+
+main #contactos_home .contenedor #texto_contacto_home .formas_contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #065f88;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 12px;
+}
+
+footer #logo-footer,
+footer #contacto-footer,
+footer #cta-footer {
+    flex: 1;
+}
+
+footer #logo-footer .contenedor {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+footer #logo-footer .contenedor .logo img {
+    width: 8.5vw;
+    height: auto;
+}
+
+footer #logo-footer .contenedor .titulo-header {
+    color: #31c5b7;
+    padding-left: 24px;
+    font-size: 1.5rem;
+}
+
+footer #logo-footer .contenedor .titulo-header>div:last-child {
+    text-align: center;
+}
+
+footer #contacto-footer {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+footer #contacto-footer,
+footer #contacto-footer a {
+    color: #30c5b6;
+    text-decoration: none;
+}
+
+footer #contacto-footer .calle,
+footer #contacto-footer .telefono,
+footer #contacto-footer .redes {
+    margin-bottom: 10px;
+}
+
+footer #contacto-footer .redes {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #contacto-footer .redes>article:first-child {
+    text-align: right;
+}
+
+footer #contacto-footer .redes>article:last-child {
+    text-align: left;
+}
+
+footer #contacto-footer .redes img {
+    max-width: 35%;
+}
+
+footer #cta-footer .contacto {
+    text-align: center;
+}
+
+.boton-contacto {
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px 24px;
+    background-color: #31c5b7;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.boton-contacto:hover {
+    transition: 0.2s all;
+    transform: scale(1.1);
+}
