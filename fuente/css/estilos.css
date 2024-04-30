@@ -1,5 +1,5 @@
 * {
-  font-family: "Comfortaa", "sans-serif";
+  font-family: "Comfortaa", "Lexend", "sans-serif";
   box-sizing: border-box;
 }
 
@@ -8,16 +8,18 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  background-color: #fafafa;
 }
 
 header {
   background-color: #fafafa;
 }
-#encabezado {
+.encabezado {
+  margin: 1rem;
   display: flex;
   justify-content: space-between;
 }
-#encabezado .logo {
+.encabezado .logo {
   display: flex;
   align-items: center;
 }
@@ -39,7 +41,6 @@ header {
 .boton-contacto {
   height: fit-content;
   border: none;
-  margin-right: 5%;
   padding: 1rem 2rem;
   background-color: #31c5b7;
   border-radius: 32px;
@@ -48,17 +49,22 @@ header {
   align-self: center;
 }
 
+.encabezado button {
+  margin: 0 1rem;
+}
+
 .boton-contacto:active,
 .boton-contacto:hover {
   transition: 0.2s all;
   transform: scale(1.1);
 }
 
-#navbar {
-  position: absolute;
+/*menu solo para movil*/
+main {
+  padding-top: 50px;
 }
 
-#hamburguesa {
+#hamburguesa-navbar {
   position: absolute;
   background-color: #31c5b7;
   height: 50px;
@@ -68,7 +74,7 @@ header {
   z-index: 9999;
 }
 
-#hamburguesa span {
+#hamburguesa-navbar span {
   position: absolute;
   height: 3px;
   width: 30px;
@@ -79,7 +85,7 @@ header {
   transition: 0.3s;
 }
 
-#hamburguesa span:before {
+#hamburguesa-navbar span:before {
   content: "";
   position: absolute;
   top: -8px;
@@ -89,7 +95,7 @@ header {
   transition: 0.3s;
 }
 
-#hamburguesa span:after {
+#hamburguesa-navbar span:after {
   content: "";
   position: absolute;
   top: 8px;
@@ -99,47 +105,225 @@ header {
   transition: 0.3s;
 }
 
-#hamburguesa.active span {
+#hamburguesa-navbar.active span {
   background-color: transparent;
 }
 
-#hamburguesa.active span:before {
+#hamburguesa-navbar.active span:before {
   top: 0;
   transform: rotate(45deg);
 }
 
-#hamburguesa.active span:after {
+#hamburguesa-navbar.active span:after {
   top: 0;
   transform: rotate(-45deg);
 }
-.menu {
-  background-color: #afe4f3;
-  top: 0;
-  left: 0;
-  width: 120%;
+
+#navbar {
+  position: absolute;
   transform: translateX(-100%);
-  transition: 0.5s;
+  transition: 0.5s all;
+  background-color: #afe4f3;
 }
 
-.menu.active {
+#navbar .menu {
+  width: 100%;
+}
+
+#navbar.active {
   transform: translateX(0);
-  transition: 0.5s;
 }
 
-.menu a {
+#navbar .menu a {
   text-decoration: none;
   color: #065f88;
   display: block;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 5rem;
   transition: 0.5s;
   text-align: right;
 }
 
-.menu a:hover {
+#navbar .menu a:hover {
   background-color: #31c5b7;
   font-weight: bold;
   color: #fafafa;
   font-size: larger;
+}
+/*fin menu movil*/
+
+/*Parte del carrusel*/
+#carrusel {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.diapositiva {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.contenido .titulo {
+  font-weight: bold;
+}
+
+.contenido .boton-contacto {
+  margin: 0 auto;
+  border: #afe4f3 solid 1px;
+}
+
+.texto {
+  font-family: "Lexend", "sans-serif", "Comfortaa";
+}
+.titulo {
+  font-size: larger;
+}
+
+.diapositiva:nth-child(odd) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.diapositiva:nth-child(odd) h5 {
+  color: #31c5b7;
+}
+.diapositiva:nth-child(odd) p {
+  color: #afe4f3;
+}
+.diapositiva:nth-child(even) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.diapositiva:nth-child(even) h5 {
+  color: #065f88;
+}
+.diapositiva:nth-child(even) p {
+  color: #fafafa;
+}
+.diapositiva:nth-child(even) .boton-contacto {
+  background-color: #afe4f3;
+}
+/*fin carrusel*/
+
+/*Parte de terapeuta*/
+#terapeuta-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+#terapeuta-home h5 {
+  color: #31c5b7;
+  font-size: larger;
+}
+
+.imagen_terapeuta {
+  width: 50%;
+  height: auto;
+}
+
+#texto_terapeuta_home p {
+  text-align: center;
+  padding: 1rem;
+  font-family: "Lexend", "sans-serif", "Comfortaa";
+  color: #065f88;
+}
+/*fin terapeuta*/
+
+/*Parte de contacto*/
+#contactos_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+#contactos_home h5 {
+  color: #31c5b7;
+  font-size: larger;
+}
+
+.formas_contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+#contactos_home .formas_contacto p,
+#contactos_home .formas_contacto a {
+  color: #065f88;
+}
+.telefono {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telefono:active {
+  color: #afe4f3;
+}
+
+#contactos_home button {
+  margin-bottom: 1rem;
+}
+
+/*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
+@media (max-width: 768px) {
+  #contactos_home button {
+    display: none;
+  }
+}
+
+#mapa_home {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+#mapa_home iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*fin contacto*/
+
+/*footer*/
+footer {
+  background-color: #065f88;
+}
+#logo-nocturno {
+  width: 100%;
+  height: auto;
+}
+#contacto-footer .formas_contacto p,
+#contacto-footer article a {
+  color: #31c5b7;
+}
+
+footer section {
+  margin: 1rem;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.redes a img {
+  max-width: 50px;
+  height: auto;
 }
 
 /*

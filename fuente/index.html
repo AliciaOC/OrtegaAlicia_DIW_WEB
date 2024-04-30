@@ -16,19 +16,12 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $("#hamburguesa").click(function () {
-          $("#hamburguesa").toggleClass("active");
-          $(".menu").toggleClass("active");
-        });
-      });
-    </script>
+    <script src="jquery/funciones.js"></script>
   </head>
 
   <body>
     <header>
-      <section id="encabezado">
+      <section class="encabezado">
         <article class="logo">
           <a class="imagen-logo" href="#">
             <img id="logo-diurno" src="imagenes/logo_claro.png" alt="logo" />
@@ -42,8 +35,8 @@
         </article>
         <button class="boton-contacto">¿Hablamos?</button>
       </section>
+      <section id="hamburguesa-navbar"><span></span></section>
       <section id="navbar">
-        <article id="hamburguesa"><span></span></article>
         <article id="nav-terapias" class="menu">
           <a href="#">Terapias Ofrecidas</a>
           <a href="#">Ansiedad</a>
@@ -59,13 +52,11 @@
     </header>
 
     <main>
-      <section id="carousel">
-        <article class="diapositiva">
-          <img
-            class="fondo"
-            src="imagenes/ansiedad_home.png"
-            alt="imagen representando la ansiedad"
-          />
+      <section id="carrusel">
+        <article
+          class="diapositiva"
+          style="background-image: url('imagenes/ansiedad-texto-terapia.jpg')"
+        >
           <div class="contenido">
             <h5 class="titulo">Ansiedad</h5>
             <p class="texto">
@@ -75,12 +66,10 @@
             <button class="boton-contacto">¿Hablamos?</button>
           </div>
         </article>
-        <article class="diapositiva">
-          <img
-            class="fondo"
-            src="imagenes/depresion_home.png"
-            alt="imagen representando la depresión"
-          />
+        <article
+          class="diapositiva"
+          style="background-image: url('imagenes/depresion_home.png')"
+        >
           <div class="contenido">
             <h5 class="titulo">Depresión</h5>
             <p class="texto">
@@ -91,12 +80,10 @@
             <button class="boton-contacto">¿Hablamos?</button>
           </div>
         </article>
-        <article class="diapositiva">
-          <img
-            class="fondo"
-            src="imagenes/sexual-terapia.jpg"
-            alt="imagen representando los trastornos sexuales"
-          />
+        <article
+          class="diapositiva"
+          style="background-image: url('imagenes/sexual-terapia.jpg')"
+        >
           <div class="contenido">
             <h5 class="titulo">Trastorno Sexual</h5>
             <p class="texto">
@@ -106,12 +93,10 @@
             <button class="boton-contacto">¿Hablamos?</button>
           </div>
         </article>
-        <article class="diapositiva">
-          <img
-            class="fondo"
-            src="imagenes/pareja-terapia.jpg"
-            alt="imagen representativa de los problemas de pareja"
-          />
+        <article
+          class="diapositiva"
+          style="background-image: url('imagenes/pareja-terapia.jpg')"
+        >
           <div class="contenido">
             <h5 class="titulo">Terapia de Pareja</h5>
             <p class="texto">
@@ -172,24 +157,26 @@
     </main>
 
     <footer>
-      <article class="region-izquierda logo">
-        <a class="imagen-logo" href="#">
-          <img id="logo-nocturno" src="imagenes/logo_oscuro.png" alt="logo" />
-        </a>
+      <section class="encabezado">
+        <article class="logo">
+          <a class="imagen-logo" href="#">
+            <img id="logo-nocturno" src="imagenes/logo_oscuro.png" alt="logo" />
+          </a>
 
-        <div class="texto-logo">
-          <p>Clínica</p>
-          <p>Psicológica</p>
-          <p>Adelante</p>
-        </div>
-      </article>
-      <button class="boton-contacto">¿Hablamos?</button>
-      <article id="contacto-footer">
-        <div class="formas_contacto">
+          <div class="texto-logo">
+            <p>Clínica</p>
+            <p>Psicológica</p>
+            <p>Adelante</p>
+          </div>
+        </article>
+        <button class="boton-contacto">¿Hablamos?</button>
+      </section>
+      <section id="contacto-footer">
+        <article class="formas_contacto">
           <p class="calle">Calle La Salud Mental s/n</p>
           <a class="telefono" href="tel:+34777777777">+34 777777777</a>
-        </div>
-        <div class="redes">
+        </article>
+        <article class="redes">
           <a href="#">
             <img
               src="imagenes/linkedin.png"
@@ -206,8 +193,8 @@
               alt="enlace a cuenta de facebook"
             />
           </a>
-        </div>
-      </article>
+        </article>
+      </section>
     </footer>
   </body>
 </html>
