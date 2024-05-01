@@ -60,96 +60,157 @@ header {
 }
 
 /*menu solo para movil*/
-main {
-  padding-top: 50px;
-}
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 50px;
+  }
 
-#hamburguesa-navbar {
-  position: absolute;
-  background-color: #31c5b7;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-  z-index: 9999;
-}
+  #hamburguesa-navbar {
+    position: absolute;
+    background-color: #31c5b7;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 9999;
+  }
 
-#hamburguesa-navbar span {
-  position: absolute;
-  height: 3px;
-  width: 30px;
-  background-color: #fafafa;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s;
-}
+  #hamburguesa-navbar span {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color: #fafafa;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
 
-#hamburguesa-navbar span:before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  background-color: #fafafa;
-  height: 3px;
-  width: 30px;
-  transition: 0.3s;
-}
+  #hamburguesa-navbar span:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+  }
 
-#hamburguesa-navbar span:after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  background-color: #fafafa;
-  height: 3px;
-  width: 30px;
-  transition: 0.3s;
-}
+  #hamburguesa-navbar span:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+  }
 
-#hamburguesa-navbar.active span {
-  background-color: transparent;
-}
+  #hamburguesa-navbar.active span {
+    background-color: transparent;
+  }
 
-#hamburguesa-navbar.active span:before {
-  top: 0;
-  transform: rotate(45deg);
-}
+  #hamburguesa-navbar.active span:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
 
-#hamburguesa-navbar.active span:after {
-  top: 0;
-  transform: rotate(-45deg);
-}
+  #hamburguesa-navbar.active span:after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
 
-#navbar {
-  position: absolute;
-  transform: translateX(-100%);
-  transition: 0.5s all;
-  background-color: #afe4f3;
-}
+  #navbar {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.5s all;
+    background-color: #afe4f3;
+  }
 
-#navbar .menu {
-  width: 100%;
-}
+  #navbar .menu {
+    width: 100%;
+  }
 
-#navbar.active {
-  transform: translateX(0);
-}
+  #navbar.active {
+    transform: translateX(0);
+  }
 
-#navbar .menu a {
-  text-decoration: none;
-  color: #065f88;
-  display: block;
-  padding: 1rem 2rem 1rem 5rem;
-  transition: 0.5s;
-  text-align: right;
-}
+  #navbar .menu a {
+    text-decoration: none;
+    color: #065f88;
+    display: block;
+    padding: 1rem 2rem 1rem 5rem;
+    transition: 0.5s;
+    text-align: right;
+  }
 
-#navbar .menu a:hover {
-  background-color: #31c5b7;
-  font-weight: bold;
-  color: #fafafa;
-  font-size: larger;
+  #navbar .menu a:active {
+    background-color: #31c5b7;
+    font-weight: bold;
+    color: #fafafa;
+    font-size: larger;
+  }
 }
 /*fin menu movil*/
+/*MENU TABLET*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #navbar {
+    border-top: #031a03 solid 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  #nav-terapias {
+    border-bottom: #065f88 dashed 1px;
+  }
+  .menu {
+    padding: 1rem;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #031a03;
+    padding-left: 1rem;
+    font-weight: bold;
+  }
+  .menu a:active {
+    transition: 0.2s;
+    color: #31c5b7;
+    font-size: large;
+  }
+}
+
+/*menu de escritorio*/
+@media screen and (min-width: 1279px) {
+  #navbar {
+    border-top: #031a03 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 2rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #031a03;
+    font-weight: bold;
+    margin-right: 2rem;
+  }
+  .menu a:hover {
+    transition: 0.3s;
+    color: #31c5b7;
+    font-size: larger;
+  }
+  .menu a:active {
+    color: #065f88;
+  }
+}
+/*fin menu escritorio*/
 
 /*Parte del carrusel*/
 #carrusel {
@@ -158,6 +219,7 @@ main {
   height: 60vh;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  border-top: #031a03 solid 1px;
 }
 
 .diapositiva {
@@ -225,6 +287,30 @@ main {
   align-items: center;
   margin: 2rem;
 }
+@media (min-width: 768px) {
+  #terapeuta-home {
+    display: grid;
+    grid-template-areas: "foto titulo" "foto texto" "foto cta";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  #terapeuta-home .imagen_terapeuta {
+    grid-area: foto;
+    padding: 1rem;
+  }
+  #terapeuta-home h5 {
+    grid-area: titulo;
+    color: #31c5b7;
+    font-size: larger;
+  }
+  #terapeuta-home #texto_terapeuta_home {
+    grid-area: texto;
+    padding: 1rem;
+  }
+  #terapeuta-home button {
+    grid-area: cta;
+  }
+}
 #terapeuta-home h5 {
   color: #31c5b7;
   font-size: larger;
@@ -241,6 +327,7 @@ main {
   font-family: "Lexend", "sans-serif", "Comfortaa";
   color: #065f88;
 }
+
 /*fin terapeuta*/
 
 /*Parte de contacto*/
