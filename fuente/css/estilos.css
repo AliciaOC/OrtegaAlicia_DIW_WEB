@@ -35,7 +35,7 @@ header {
 }
 
 #logo-diurno {
-  width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -87,7 +87,7 @@ header {
     background-color: #fafafa;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*para centrar el icono*/
     transition: 0.3s;
   }
 
@@ -127,7 +127,7 @@ header {
 
   #navbar {
     position: absolute;
-    transform: translateX(-100%);
+    transform: translateX(-100%); /*para que no se vea el menu*/
     transition: 0.5s all;
     background-color: #afe4f3;
   }
@@ -137,7 +137,7 @@ header {
   }
 
   #navbar.active {
-    transform: translateX(0);
+    transform: translateX(0); /*para que se vea el menu*/
   }
 
   #navbar .menu a {
@@ -145,7 +145,6 @@ header {
     color: #065f88;
     display: block;
     padding: 1rem 2rem 1rem 5rem;
-    transition: 0.5s;
     text-align: right;
   }
 
@@ -153,7 +152,6 @@ header {
     background-color: #31c5b7;
     font-weight: bold;
     color: #fafafa;
-    font-size: larger;
   }
 }
 /*fin menu movil*/
@@ -181,9 +179,7 @@ header {
     font-weight: bold;
   }
   .menu a:active {
-    transition: 0.2s;
     color: #31c5b7;
-    font-size: large;
   }
 }
 
@@ -209,7 +205,7 @@ header {
   .menu a:hover {
     transition: 0.3s;
     color: #31c5b7;
-    font-size: larger;
+    scale: 1.1;
   }
   .menu a:active {
     color: #065f88;
@@ -225,10 +221,13 @@ header {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   border-top: #031a03 solid 1px;
+  border-bottom: #031a03 solid 1px;
+  /*escondo la barra horizontal*/
+  scrollbar-width: none;
 }
 
 .diapositiva {
-  flex: 0 0 100%;
+  flex: 0 0 100%; /*para que no se haga pequeño*/
   width: 100%;
   scroll-snap-align: start;
   background-size: cover;
@@ -236,10 +235,16 @@ header {
 }
 
 .contenido {
-  width: 50%;
   margin: 1rem;
   padding: 1rem;
   text-align: center;
+  border-radius: 32px;
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  .contenido {
+    width: 30%;
+  }
 }
 .contenido .titulo {
   font-weight: bold;
@@ -263,6 +268,9 @@ header {
   align-items: center;
 }
 
+.diapositiva:nth-child(odd) .contenido {
+  background-color: #065f88cc;
+}
 .diapositiva:nth-child(odd) h5 {
   color: #31c5b7;
 }
@@ -273,6 +281,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.diapositiva:nth-child(even) .contenido {
+  background-color: #31c5b7cc;
 }
 .diapositiva:nth-child(even) h5 {
   color: #065f88;
@@ -384,7 +395,8 @@ header {
 }
 
 /*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
-@media (max-width: 1000px) {
+@media (max-width: 999.5px) {
+  /*si ponia 1000 o 999px tenía un comportamiento extraño en el límite*/
   #contactos_home button {
     display: none;
   }
@@ -433,10 +445,15 @@ header {
 footer {
   background-color: #065f88;
 }
+
+footer .encabezado {
+  padding-top: 1rem;
+}
 #logo-nocturno {
-  width: 100%;
+  max-width: 80%;
   height: auto;
 }
+
 #contacto-footer .formas_contacto p,
 #contacto-footer article a {
   color: #31c5b7;
