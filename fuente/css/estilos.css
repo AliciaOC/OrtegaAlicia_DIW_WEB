@@ -30,17 +30,28 @@ header {
 }
 
 .imagen-logo {
-  width: 40%;
+  width: 30%;
   height: auto;
 }
 
 #logo-diurno {
   max-width: 80%;
+  min-width: 50%;
   height: auto;
 }
 
 .texto-logo {
   color: #31c5b7;
+  font-size: smaller;
+}
+.texto-logo p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .texto-logo {
+    font-size: x-large;
+  }
 }
 
 .boton-contacto {
@@ -232,6 +243,7 @@ header {
   scroll-snap-align: start;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .contenido {
@@ -252,7 +264,6 @@ header {
 
 .contenido .boton-contacto {
   margin: 0 auto;
-  border: #afe4f3 solid 1px;
 }
 
 .texto {
@@ -293,6 +304,22 @@ header {
 }
 .diapositiva:nth-child(even) .boton-contacto {
   background-color: #afe4f3;
+}
+
+/*botones de navegación del carrusel*/
+.anterior,
+.siguiente {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #afe4f3;
+  cursor: pointer;
+}
+
+.anterior:hover,
+.siguiente:hover {
+  color: #031a03;
+  scale: 1.1;
 }
 /*fin carrusel*/
 
