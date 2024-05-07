@@ -11,12 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script src="jquery/funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/hamburguesa.js"></script>
+    <script src="js/carrusel.js" defer></script>
   </head>
 
   <body>
@@ -52,65 +49,68 @@
     </header>
 
     <main>
-      <section id="carrusel">
-        <article
-          class="diapositiva"
-          style="background-image: url('imagenes/ansiedad-home.webp')"
-        >
-          <div class="contenido">
-            <h5 class="titulo">Ansiedad</h5>
-            <p class="texto">
-              Preocupación excesiva, agotamiento, irritabilidad..., a veces nos
-              sentimos así, pero si te está sobrepasando es mejor pedir ayuda.
-            </p>
-            <button class="boton-contacto">¿Hablamos?</button>
-          </div>
-        </article>
-        <article
-          class="diapositiva"
-          style="background-image: url('imagenes/depresion-home.webp')"
-        >
-          <div class="contenido">
-            <h5 class="titulo">Depresión</h5>
-            <p class="texto">
-              Tristeza, falta de energía, desinterés por las cosas que antes te
-              gustaban son síntomas comunes de la depresión. Es más fácil
-              superarlo con ayuda.
-            </p>
-            <button class="boton-contacto">¿Hablamos?</button>
-          </div>
-        </article>
-        <article
-          class="diapositiva"
-          style="background-image: url('imagenes/sexual-home.webp')"
-        >
-          <div class="contenido">
-            <h5 class="titulo">Trastorno Sexual</h5>
-            <p class="texto">
-              La sexualidad es un aspecto importante de la vida, si tienes
-              problemas o dudas en este ámbito no dudes en pedir ayuda.
-            </p>
-            <button class="boton-contacto">¿Hablamos?</button>
-          </div>
-        </article>
-        <article
-          class="diapositiva"
-          style="background-image: url('imagenes/pareja-home.webp')"
-        >
-          <div class="contenido">
-            <h5 class="titulo">Terapia de Pareja</h5>
-            <p class="texto">
-              La convivencia en pareja puede ser complicada, pero con ayuda
-              profesional se pueden superar los obstáculos.
-            </p>
-            <button class="boton-contacto">¿Hablamos?</button>
-          </div>
-        </article>
+      <section id="carrusel-y-botones">
+        <section id="carrusel">
+          <article
+            class="diapositiva"
+            style="background-image: url('imagenes/ansiedad-home.webp')"
+          >
+            <div class="contenido">
+              <h5 class="titulo">Ansiedad</h5>
+              <p class="texto">
+                Preocupación excesiva, agotamiento, irritabilidad..., a veces
+                nos sentimos así, pero si te está sobrepasando es mejor pedir
+                ayuda.
+              </p>
+              <button class="boton-contacto">¿Hablamos?</button>
+            </div>
+          </article>
+          <article
+            class="diapositiva"
+            style="background-image: url('imagenes/depresion-home.webp')"
+          >
+            <div class="contenido">
+              <h5 class="titulo">Depresión</h5>
+              <p class="texto">
+                Tristeza, falta de energía, desinterés por las cosas que antes
+                te gustaban son síntomas comunes de la depresión. Es más fácil
+                superarlo con ayuda.
+              </p>
+              <button class="boton-contacto">¿Hablamos?</button>
+            </div>
+          </article>
+          <article
+            class="diapositiva"
+            style="background-image: url('imagenes/sexual-home.webp')"
+          >
+            <div class="contenido">
+              <h5 class="titulo">Trastorno Sexual</h5>
+              <p class="texto">
+                La sexualidad es un aspecto importante de la vida, si tienes
+                problemas o dudas en este ámbito no dudes en pedir ayuda.
+              </p>
+              <button class="boton-contacto">¿Hablamos?</button>
+            </div>
+          </article>
+          <article
+            class="diapositiva"
+            style="background-image: url('imagenes/pareja-home.webp')"
+          >
+            <div class="contenido">
+              <h5 class="titulo">Terapia de Pareja</h5>
+              <p class="texto">
+                La convivencia en pareja puede ser complicada, pero con ayuda
+                profesional se pueden superar los obstáculos.
+              </p>
+              <button class="boton-contacto">¿Hablamos?</button>
+            </div>
+          </article>
+        </section>
+        <nav id="botones-navegacion-carrusel">
+          <button class="anterior nav-button">◀</button>
+          <button class="siguiente nav-button">▶</button>
+        </nav>
       </section>
-      <article id="botones-navegacion-carrusel">
-        <button class="anterior">◀</button>
-        <button class="siguiente">▶</button>
-      </article>
 
       <section id="terapeuta-home">
         <h5 class="titulo">Mari Sol García Martínez</h5>

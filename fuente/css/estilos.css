@@ -225,25 +225,23 @@ header {
 /*fin menu escritorio*/
 
 /*Parte del carrusel*/
+#carrusel-y-botones {
+  overflow: hidden;
+}
 #carrusel {
   display: flex;
   width: 100%;
   height: 60vh;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
   border-top: #031a03 solid 1px;
   border-bottom: #031a03 solid 1px;
-  /*escondo la barra horizontal*/
-  scrollbar-width: none;
+  transition: transform 0.5s ease-in-out;
 }
 
 .diapositiva {
-  flex: 0 0 100%; /*para que no se haga pequeño*/
-  width: 100%;
-  scroll-snap-align: start;
+  min-width: 100%;
+  box-sizing: border-box;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .contenido {
@@ -307,19 +305,25 @@ header {
 }
 
 /*botones de navegación del carrusel*/
-.anterior,
-.siguiente {
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  color: #afe4f3;
-  cursor: pointer;
+#botones-navegacion-carrusel {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -50px;
 }
 
-.anterior:hover,
-.siguiente:hover {
-  color: #031a03;
-  scale: 1.1;
+.nav-button {
+  background-color: #2ab0a3;
+  color: #afe4f3;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #afe4f3;
+  color: #065f88;
 }
 /*fin carrusel*/
 
