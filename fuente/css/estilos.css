@@ -11,6 +11,15 @@ body {
   background-color: #fafafa;
 }
 
+/*dejo margenes laterales en las resoluciones muy grandes*/
+@media screen and (min-width: 1400px) {
+  header,
+  main,
+  #contenedor-footer {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
 header {
   background-color: #fafafa;
 }
@@ -30,27 +39,40 @@ header {
 }
 
 .imagen-logo {
-  width: 30%;
+  max-width: 100px;
+  min-width: 50px;
   height: auto;
 }
 
 #logo-diurno {
-  max-width: 80%;
-  min-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
 .texto-logo {
   color: #31c5b7;
-  font-size: smaller;
+  font-weight: bold;
 }
+
 .texto-logo p {
   margin: 0;
   padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 1000px) {
-  .texto-logo {
+@media screen and (min-width: 768px) {
+  header .encabezado .texto-logo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header .encabezado .texto-logo p {
+    padding-left: 1rem;
     font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header .encabezado .texto-logo p {
+    font-size: xx-large;
   }
 }
 
@@ -58,7 +80,7 @@ header {
   height: fit-content;
   border: none;
   padding: 1rem 2rem;
-  background-color: #31c5b7;
+  background-color: #afe4f3;
   border-radius: 32px;
   cursor: pointer;
   display: flex;
@@ -141,6 +163,7 @@ header {
     transform: translateX(-100%); /*para que no se vea el menu*/
     transition: 0.5s all;
     background-color: #afe4f3;
+    z-index: 1;
   }
 
   #navbar .menu {
@@ -335,6 +358,17 @@ header {
   margin: 2rem;
 }
 
+#terapeuta-home picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen_terapeuta {
+  max-width: 100%;
+  height: auto;
+}
+
 /*para pantallas grandes*/
 @media (min-width: 1000px) {
   #terapeuta-home {
@@ -345,11 +379,11 @@ header {
     grid-template-rows: 0.5fr 2fr 0.5fr;
     align-items: center;
   }
-  #terapeuta-home .imagen_terapeuta {
+  #terapeuta-home picture {
     grid-area: imagen;
-    width: 100%;
     padding-left: 1rem;
   }
+
   #terapeuta-home h5 {
     grid-area: titulo;
     color: #31c5b7;
@@ -373,11 +407,6 @@ header {
 #terapeuta-home h5 {
   color: #31c5b7;
   font-size: larger;
-}
-
-.imagen_terapeuta {
-  width: 50%;
-  height: auto;
 }
 
 #texto_terapeuta_home p {
@@ -468,6 +497,14 @@ header {
     grid-column: 2;
     grid-row: 1 / span 3;
   }
+  #contenedor-footer .encabezado .texto-logo p {
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #contenedor-footer .encabezado .texto-logo p {
+    font-size: xx-large;
+  }
 }
 /*fin de parte responsiva para pantallas grandes*/
 /*fin contacto*/
@@ -477,11 +514,15 @@ footer {
   background-color: #065f88;
 }
 
-footer .encabezado {
+#contenedor-footer .encabezado {
   padding-top: 1rem;
 }
+
+footer .encabezado .logo .texto-logo {
+  padding-left: 1rem;
+}
 #logo-nocturno {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -490,7 +531,7 @@ footer .encabezado {
   color: #31c5b7;
 }
 
-footer section {
+#contenedor-footer section {
   margin: 1rem;
 }
 
@@ -504,27 +545,27 @@ footer section {
   height: auto;
 }
 /*footer para pantallas grandes*/
-@media (min-width: 1000px) {
-  footer {
+@media (min-width: 768px) {
+  #contenedor-footer {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
   }
-  footer .encabezado {
+  #contenedor-footer .encabezado {
     grid-column: 1 / span 3;
     grid-row: 1;
   }
-  footer #contacto-footer {
+  #contenedor-footer #contacto-footer {
     grid-column: 2;
     grid-row: 1 / span 2;
     align-self: center;
   }
-  footer #contacto-footer .formas_contacto .telefono:hover {
+  #contenedor-footer #contacto-footer .formas_contacto .telefono:hover {
     transition: 0.5s;
     color: #afe4f3;
     font-weight: bold;
   }
 
-  footer #contacto-footer .redes a img:hover {
+  #contenedor-footer #contacto-footer .redes a img:hover {
     transition: 0.5s;
     transform: scale(1.5);
   }

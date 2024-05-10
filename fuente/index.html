@@ -25,9 +25,9 @@
           </a>
 
           <div class="texto-logo">
-            <p><strong>Clínica</strong></p>
-            <p><strong>Psicológica</strong></p>
-            <p><strong>Adelante</strong></p>
+            <p>Clínica</p>
+            <p>Psicológica</p>
+            <p>Adelante</p>
           </div>
         </article>
         <button class="boton-contacto">¿Hablamos?</button>
@@ -114,11 +114,16 @@
 
       <section id="terapeuta-home">
         <h5 class="titulo">Mari Sol García Martínez</h5>
-        <img
-          class="imagen imagen_terapeuta"
-          src="imagenes/psicologa.webp"
-          alt="foto de la psicóloga"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 1000px)"
+            srcset="imagenes/psicologa_300.webp" />
+          <img
+            class="imagen imagen_terapeuta"
+            src="imagenes/psicologa_400.webp"
+            alt="foto de la psicóloga"
+        /></picture>
         <article id="texto_terapeuta_home" class="texto">
           <p>
             Desde que me gradué en Psicología por la Universidad de Granada he
@@ -161,48 +166,53 @@
     </main>
 
     <footer>
-      <section class="encabezado">
-        <article class="logo">
-          <a class="imagen-logo" href="#">
-            <img
-              id="logo-nocturno"
-              src="imagenes/logo_oscuro.webp"
-              alt="logo"
-            />
-          </a>
+      <div id="contenedor-footer">
+        <section class="encabezado">
+          <article class="logo">
+            <a class="imagen-logo" href="#">
+              <img
+                id="logo-nocturno"
+                src="imagenes/logo_oscuro.webp"
+                alt="logo"
+              />
+            </a>
 
-          <div class="texto-logo">
-            <p>Clínica</p>
-            <p>Psicológica</p>
-            <p>Adelante</p>
-          </div>
-        </article>
-        <button class="boton-contacto">¿Hablamos?</button>
-      </section>
-      <section id="contacto-footer">
-        <article class="formas_contacto">
-          <p class="calle">Calle La Salud Mental s/n</p>
-          <a class="telefono" href="tel:+34777777777">+34 777777777</a>
-        </article>
-        <article class="redes">
-          <a href="#">
-            <img
-              src="imagenes/linkedin.webp"
-              alt="enlace a cuenta de linkedin"
-            />
-          </a>
-          <a href="#">
-            <img src="imagenes/insta.webp" alt="enlace a cuenta de instagram" />
-          </a>
+            <div class="texto-logo">
+              <p>Clínica</p>
+              <p>Psicológica</p>
+              <p>Adelante</p>
+            </div>
+          </article>
+          <button class="boton-contacto">¿Hablamos?</button>
+        </section>
+        <section id="contacto-footer">
+          <article class="formas_contacto">
+            <p class="calle">Calle La Salud Mental s/n</p>
+            <a class="telefono" href="tel:+34777777777">+34 777777777</a>
+          </article>
+          <article class="redes">
+            <a href="#">
+              <img
+                src="imagenes/linkedin.webp"
+                alt="enlace a cuenta de linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="imagenes/insta.webp"
+                alt="enlace a cuenta de instagram"
+              />
+            </a>
 
-          <a href="#">
-            <img
-              src="imagenes/facebook.webp"
-              alt="enlace a cuenta de facebook"
-            />
-          </a>
-        </article>
-      </section>
+            <a href="#">
+              <img
+                src="imagenes/facebook.webp"
+                alt="enlace a cuenta de facebook"
+              />
+            </a>
+          </article>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
