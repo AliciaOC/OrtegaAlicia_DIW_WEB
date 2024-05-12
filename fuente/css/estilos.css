@@ -19,7 +19,18 @@ body {
     width: 1400px;
     margin: 0 auto;
   }
+  body::after {
+    /*posiciono una linea horizontal que ocupe todo el ancho del body y que esté exactamente a la misma altura del border-top del navbar del menú de escritorio. De otra forma se notarían los márgenes añadidos*/
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #031a03cb;
+    position: absolute;
+    top: 135.5px;
+  }
 }
+
 header {
   background-color: #fafafa;
 }
@@ -255,16 +266,12 @@ header {
   display: flex;
   width: 100%;
   height: 60vh;
-  border-top: #031a03 solid 1px;
-  border-bottom: #031a03 solid 1px;
   transition: transform 0.5s ease-in-out;
 }
 
 .diapositiva {
   min-width: 100%;
   box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
 }
 
 .contenido {
@@ -294,6 +301,7 @@ header {
   font-size: larger;
 }
 
+/*modifico cómo se ve el contenido en las diapositivas pares e impares*/
 .diapositiva:nth-child(odd) {
   display: flex;
   justify-content: flex-start;
@@ -327,6 +335,56 @@ header {
   background-color: #afe4f3;
 }
 
+/*fondos de las diapositivas*/
+.diapositiva {
+  background-size: cover;
+  background-position: center;
+}
+/*Fondos de las diapositivas por tamaños de pantallas*/
+@media screen and (max-width: 500px) {
+  .diapositiva:first-child {
+    background-image: url("../imagenes/ansiedad-movil.webp");
+  }
+  .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-movil.webp");
+  }
+  .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-movil.webp");
+  }
+  .diapositiva:last-child {
+    background-image: url("../imagenes/pareja-movil.webp");
+  }
+}
+@media screen and (max-width: 1000px) {
+  .diapositiva:first-child {
+    background-image: url("../imagenes/ansiedad-tablet.webp");
+  }
+  .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-tablet.webp");
+  }
+  .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-tablet.webp");
+  }
+  .diapositiva:last-child {
+    background-image: url("../imagenes/pareja-tablet.webp");
+  }
+}
+@media screen and (min-width: 1000px) {
+  .diapositiva:first-child {
+    background-image: url("../imagenes/ansiedad-escritorio.webp");
+  }
+  .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-escritorio.webp");
+  }
+  .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-escritorio.webp");
+  }
+  .diapositiva:last-child {
+    background-image: url("../imagenes/pareja-escritorio.webp");
+  }
+}
+/*fin de fondos de las diapositivas*/
+
 /*botones de navegación del carrusel*/
 #botones-navegacion-carrusel {
   display: flex;
@@ -356,17 +414,6 @@ header {
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-}
-
-#terapeuta-home picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagen_terapeuta {
-  max-width: 100%;
-  height: auto;
 }
 
 /*para pantallas grandes*/
