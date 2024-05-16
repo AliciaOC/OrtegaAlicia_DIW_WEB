@@ -1,0 +1,21 @@
+/*Para los menu .a de los navbar medianos y grandes*/
+@mixin formato-enlaces-headersGrandes{
+    text-decoration: none;
+    color: #031a03;
+    font-weight: bold;
+}
+
+/*Dentro del carrusel, para distribuir el contenido a la izquierda o derecha: flex-start o flex-end en posicion*/
+@mixin display-diapositiva($posicion){
+    display: flex;
+    justify-content: $posicion;
+    align-items: center;
+}
+
+/*Para centrar el contenido del main cuando solo hay una columna*/
+@mixin display-contenido-movil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
