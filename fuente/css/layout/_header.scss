@@ -1,21 +1,31 @@
-/*parte de flex*/
-/*el .encabezado es aplicable en header y footer*/
-.encabezado {
-    margin: 1rem;
-    display: flex;
-    justify-content: space-between;
-  
-    .logo {
-        display: flex;
-        align-items: center;
+/*----------------------------------------------------------------------------*/
 
-        .texto-logo{
-            @include mixin-media-query-MIN(m){
-                & {
-                    display: flex;
-                    flex-direction: row;
-                }
-            }
+/*Parte del header*/
+@include mixin-media-query-MIN(m){
+    header .encabezado .logo .texto-logo {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+/*Menú para tablet*/
+@include mixin-media-query-Min-Max(m, g){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+/*Menú para escritorio*/
+@include mixin-media-query-MIN(g){
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+
+        .menu {
+            display: flex;
+            flex-wrap: nowrap;
         }
     }
 }

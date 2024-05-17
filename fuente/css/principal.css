@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Primero los estilos que afectan a varias partes de la página*/
 * {
   font-family: "Comfortaa", "Lexend", "sans-serif";
   box-sizing: border-box;
@@ -32,6 +33,9 @@ body {
   }
 }
 /*partes específicas del encabezado, recordando que está tanto en el header como en el footer*/
+.encabezado {
+  margin: 1rem;
+}
 @media screen and (min-width: 1000px) {
   .encabezado {
     margin: 1rem 2rem;
@@ -54,106 +58,10 @@ body {
   margin: 0;
   padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 768px) {
-  .encabezado .logo .texto-logo p {
-    padding-left: 1rem;
-    font-size: x-large;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .encabezado .logo .texto-logo p {
-    font-size: xx-large;
-  }
-}
 .encabezado .boton-contacto {
   margin: 0 1rem;
 }
 
-header {
-  /*Menú para móvil*/
-  /*Fin menú para móvil*/
-  /*Menú para tablet*/
-  /*Fin menú para tablet*/
-}
-@media screen and (max-width: 768px) {
-  header #hamburguesa-navbar {
-    position: absolute;
-    background-color: #31c5b7;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 9999;
-  }
-  header #hamburguesa-navbar span {
-    position: absolute;
-    height: 3px;
-    width: 30px;
-    background-color: #fafafa;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*para centrar el icono*/
-    transition: 0.3s;
-  }
-  header #hamburguesa-navbar span::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    background-color: #fafafa;
-    height: 3px;
-    width: 30px;
-    transition: 0.3s;
-    top: -8px;
-  }
-  header #hamburguesa-navbar span::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    background-color: #fafafa;
-    height: 3px;
-    width: 30px;
-    transition: 0.3s;
-    top: 8px;
-  }
-  header #hamburguesa-navbar.active span {
-    background-color: transparent;
-  }
-  header #hamburguesa-navbar.active span::before {
-    top: 0;
-    transform: rotate(45deg);
-  }
-  header #hamburguesa-navbar.active span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-  header #navbar {
-    position: absolute;
-    transform: translateX(-100%); /*para que no se vea el menu*/
-    transition: 0.5s all;
-    background-color: #afe4f3;
-    z-index: 1;
-  }
-  header #navbar .menu {
-    width: 100%;
-  }
-  header #navbar .menu a {
-    text-decoration: none;
-    color: #065f88;
-    display: block;
-    padding: 1rem 2rem 1rem 5rem;
-    text-align: right;
-  }
-  header #navbar .menu a:active {
-    background-color: #31c5b7;
-    font-weight: bold;
-    color: #fafafa;
-  }
-  header #navbar.active {
-    transform: translateX(0); /*para que se vea el menu*/
-  }
-}
-
-/*Fin header*/
 /*Aplicable a todos los botones CTA de la página*/
 .boton-contacto {
   height: -moz-fit-content;
@@ -163,24 +71,310 @@ header {
   background-color: #afe4f3;
   border-radius: 32px;
   cursor: pointer;
-  display: flex;
-  align-self: center;
 }
 .boton-contacto:active, .boton-contacto:hover {
   transition: 0.2s all;
   transform: scale(1.1);
 }
 
-/*Para el menú del móvil, como uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
+/*textos y títulos de la página*/
+.texto {
+  font-family: "Lexend", "sans-serif", "Comfortaa";
+}
+
+.titulo {
+  font-size: larger;
+}
+
+/*Estilos por partes específicas de la página*/
+/*Header*/
+@media screen and (min-width: 768px) {
+  header .encabezado .logo .texto-logo p {
+    padding-left: 1rem;
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header .encabezado .logo .texto-logo p {
+    font-size: xx-large;
+  }
+}
+/*Menú para móvil*/
+@media screen and (max-width: 768px) {
+  #hamburguesa-navbar {
+    position: absolute;
+    background-color: #31c5b7;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 9999;
+  }
+  #hamburguesa-navbar span {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color: #fafafa;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrar el icono*/
+    transition: 0.3s;
+  }
+  #hamburguesa-navbar span::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+    top: -8px;
+  }
+  #hamburguesa-navbar span::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+    top: 8px;
+  }
+  #hamburguesa-navbar.active span {
+    background-color: transparent;
+  }
+  #hamburguesa-navbar.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  #hamburguesa-navbar.active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  #navbar {
+    position: absolute;
+    transform: translateX(-100%); /*para que no se vea el menu*/
+    transition: 0.5s all;
+    background-color: #afe4f3;
+    z-index: 1;
+  }
+  #navbar .menu {
+    width: 100%;
+  }
+  #navbar .menu a {
+    text-decoration: none;
+    color: #065f88;
+    display: block;
+    padding: 1rem 2rem 1rem 5rem;
+    text-align: right;
+  }
+  #navbar .menu a:active {
+    background-color: #31c5b7;
+    font-weight: bold;
+    color: #fafafa;
+  }
+  #navbar.active {
+    transform: translateX(0); /*para que se vea el menu*/
+  }
+}
+/*Fin menú para móvil*/
+/*Menú para tablet*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #navbar {
+    border-top: 1px solid #031a03;
+  }
+  #navbar #nav-terapias {
+    border-bottom: #065f88 dashed 1px;
+  }
+  #navbar .menu {
+    padding: 1rem;
+  }
+  #navbar .menu a {
+    text-decoration: none;
+    color: #031a03;
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+  #navbar .menu a:active {
+    color: #31c5b7;
+  }
+}
+/*Fin menú para tablet*/
+/*Menú para escritorio*/
+@media screen and (min-width: 1279px) {
+  #navbar {
+    border-top: 1px solid #031a03;
+    padding: 1rem 0 1rem 2rem;
+  }
+  #navbar .menu a {
+    text-decoration: none;
+    color: #031a03;
+    font-weight: bold;
+    margin-right: 2rem;
+  }
+  #navbar .menu a:hover {
+    transition: 0.3s;
+    color: #31c5b7;
+    scale: 1.1;
+  }
+  #navbar .menu a:active {
+    color: #065f88;
+  }
+}
+/*Fin menú escritorio*/
+/*Fin header*/
+/*Main*/
+/*Para el menú del móvil uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
 @media screen and (max-width: 768px) {
   main {
     padding-top: 50px;
   }
 }
-/*parte de flex*/
+/*Carrusel*/
+#carrusel-y-botones {
+  overflow: hidden;
+}
+#carrusel-y-botones #carrusel {
+  width: 100%;
+  height: 60vh;
+  transition: transform 0.5s ease-in-out;
+}
+#carrusel-y-botones #carrusel .diapositiva {
+  min-width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  /*Imágenes de fondo*/
+  /*modifico cómo se ve el contenido en las diapositivas pares e impares*/
+}
+@media screen and (max-width: 500px) {
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(1) {
+    background-image: url("../imagenes/ansiedad-movil.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-movil.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-movil.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(4) {
+    background-image: url("../imagenes/pareja-movil.webp");
+  }
+}
+@media screen and (min-width: 500px) {
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(1) {
+    background-image: url("../imagenes/ansiedad-tablet.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-tablet.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-tablet.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(4) {
+    background-image: url("../imagenes/pareja-tablet.webp");
+  }
+}
+@media screen and (min-width: 1000px) {
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(1) {
+    background-image: url("../imagenes/ansiedad-escritorio.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(2) {
+    background-image: url("../imagenes/depresion-escritorio.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(3) {
+    background-image: url("../imagenes/sexual-escritorio.webp");
+  }
+  #carrusel-y-botones #carrusel .diapositiva:nth-child(4) {
+    background-image: url("../imagenes/pareja-escritorio.webp");
+  }
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(odd) .contenido {
+  background-color: #065f88;
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(odd) h5 {
+  color: #31c5b7;
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(odd) p {
+  color: #afe4f3;
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(even) .contenido {
+  background-color: #31c5b7;
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(even) h5 {
+  color: #065f88;
+}
+#carrusel-y-botones #carrusel .diapositiva:nth-child(even) p {
+  color: #fafafa;
+}
+#carrusel-y-botones #carrusel .diapositiva .contenido {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 32px;
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  #carrusel-y-botones #carrusel .diapositiva .contenido {
+    width: 30%;
+  }
+}
+#carrusel-y-botones #carrusel .diapositiva .contenido .titulo {
+  font-weight: bold;
+}
+#carrusel-y-botones #carrusel .diapositiva .contenido .boton-contacto {
+  margin: 0 auto;
+}
+#carrusel-y-botones #botones-navegacion-carrusel {
+  position: relative;
+  top: -50px;
+}
+#carrusel-y-botones #botones-navegacion-carrusel .nav-button {
+  background-color: #2ab0a3;
+  color: #afe4f3;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#carrusel-y-botones #botones-navegacion-carrusel .nav-button:hover {
+  background-color: #afe4f3;
+  color: #31c5b7;
+}
+
+/*Fin parte carrusel*/
+/*Fin main*/
+/*----------------------------------------------------------------------------*/
+/*Parte del header*/
+@media screen and (min-width: 768px) {
+  header .encabezado .logo .texto-logo {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/*Menú para tablet*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+/*Menú para escritorio*/
+@media screen and (min-width: 1279px) {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  #navbar .menu {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+/*------------------------------------*/
 /*el .encabezado es aplicable en header y footer*/
 .encabezado {
-  margin: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -188,9 +382,30 @@ header {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .encabezado .logo .texto-logo {
-    display: flex;
-    flex-direction: row;
-  }
+
+/*Aplica a los CTA de toda la página*/
+.boton-contacto {
+  display: flex;
+  align-self: center;
+}
+
+/*------------------------------------*/
+/* Carrusel */
+#carrusel {
+  display: flex;
+}
+#carrusel .diapositiva:nth-child(odd) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#carrusel .diapositiva:nth-child(even) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#botones-navegacion-carrusel {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=principal.css.map */

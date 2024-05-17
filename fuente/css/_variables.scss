@@ -23,22 +23,22 @@ $borde-superior: 1px solid $negro;
 
 //Imágenes del carrusel del home según su tamaño
 $imagenes-carrusel-movil:(
-    ansiedad: "../imagenes/ansiedad-movil.webp",
-    depresion: "../imagenes/depresion-movil.webp",
-    sexual: "../imagenes/sexual-movil.webp",
-    pareja: "../imagenes/pareja-movil.webp"
+    1: "../imagenes/ansiedad-movil.webp",
+    2: "../imagenes/depresion-movil.webp",
+    3: "../imagenes/sexual-movil.webp",
+    4: "../imagenes/pareja-movil.webp"
 );
 
 $imagenes-carrusel-tablet:(
-    ansiedad: "../imagenes/ansiedad-tablet.webp",
-    depresion: "../imagenes/depresion-tablet.webp",
-    sexual: "../imagenes/sexual-tablet.webp",
-    pareja: "../imagenes/pareja-tablet.webp"
+    1: "../imagenes/ansiedad-tablet.webp",
+    2: "../imagenes/depresion-tablet.webp",
+    3: "../imagenes/sexual-tablet.webp",
+    4: "../imagenes/pareja-tablet.webp"
 );
 
 $imagenes-carrusel-escritorio:(
-    ansiedad: "../imagenes/ansiedad-escritorio.webp",
-    depresion: "../imagenes/depresion-escritorio.webp",
-    sexual: "../imagenes/sexual-escritorio.webp",
-    pareja: "../imagenes/pareja-escritorio.webp"
+    1: "../imagenes/ansiedad-escritorio.webp",
+    2: "../imagenes/depresion-escritorio.webp",
+    3: "../imagenes/sexual-escritorio.webp",
+    4: "../imagenes/pareja-escritorio.webp"
 );

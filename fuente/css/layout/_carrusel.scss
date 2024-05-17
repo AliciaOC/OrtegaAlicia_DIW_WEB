@@ -1,0 +1,17 @@
+/*------------------------------------*/
+/* Carrusel */
+#carrusel{
+    display: flex;
+
+    .diapositiva:nth-child(odd){
+        @include display-diapositiva("impar");
+    }
+    .diapositiva:nth-child(even){
+        @include display-diapositiva("par");
+    }
+}
+
+#botones-navegacion-carrusel {
+    display: flex;
+    justify-content: space-between;
+  }

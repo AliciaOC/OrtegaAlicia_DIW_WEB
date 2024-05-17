@@ -1,0 +1,17 @@
+/*------------------------------------*/
+/*el .encabezado es aplicable en header y footer*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+  
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*Aplica a los CTA de toda la página*/
+.boton-contacto{
+    display: flex;
+    align-self: center;
+}

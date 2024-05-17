@@ -23,11 +23,24 @@
     font-weight: bold;
 }
 
-//Dentro del carrusel, para distribuir el contenido a la izquierda o derecha: flex-start o flex-end en posicion
-@mixin display-diapositiva($posicion){
+//Dentro del carrusel, para distribuir el contenido a la izquierda o derecha
+@mixin display-diapositiva($par-impar){
     display: flex;
-    justify-content: $posicion;
+    @if $par-impar == "par"{
+        justify-content: flex-end;
+    }@else{
+        justify-content: flex-start;
+    }
     align-items: center;
+}
+
+//Dentro del carrusel, para las imágenes de fondo
+@mixin imagenes-carrusel($lista){
+@each $hija, $imagen in $lista {
+    &:nth-child(#{$hija}) {
+        background-image: url($imagen);
+    }
+  }
 }
 
 //Para centrar el contenido del main cuando solo hay una columna
