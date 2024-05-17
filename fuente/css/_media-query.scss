@@ -1,14 +1,5 @@
 @use "sass:map";
 
-/*Rupturas*/
-$ruptura: (
-    p:500px,
-    m:768px,
-    m-g:1000px,
-    g:1279px,
-    xg:1400px
-);
-
 @mixin mixin-media-query-MAX($valor) {
     $tamano: map.get($ruptura, $valor);
 

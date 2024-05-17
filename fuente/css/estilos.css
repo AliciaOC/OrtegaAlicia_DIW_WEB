@@ -31,9 +31,6 @@ body {
   }
 }
 
-header {
-  background-color: #fafafa;
-}
 .encabezado {
   margin: 1rem;
   display: flex;

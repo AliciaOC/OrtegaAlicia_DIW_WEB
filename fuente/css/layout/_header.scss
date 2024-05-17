@@ -1,0 +1,21 @@
+/*parte de flex*/
+/*el .encabezado es aplicable en header y footer*/
+.encabezado {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+  
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .texto-logo{
+            @include mixin-media-query-MIN(m){
+                & {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}

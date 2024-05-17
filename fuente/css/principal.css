@@ -1,10 +1,4 @@
-/*Colores*/
-/*Fuentes*/
-/*Rupturas*/
-/*Para los menu .a de los navbar medianos y grandes*/
-/*Dentro del carrusel, para distribuir el contenido a la izquierda o derecha: flex-start o flex-end en posicion*/
-/*Para centrar el contenido del main cuando solo hay una columna*/
-/*Rupturas*/
+@charset "UTF-8";
 * {
   font-family: "Comfortaa", "Lexend", "sans-serif";
   box-sizing: border-box;
@@ -16,4 +10,187 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fafafa;
+}
+
+/*media-query para dejar margenes laterales cuando la resolución de pantalla es muy ancha*/
+@media screen and (min-width: 1400px) {
+  header,
+  main,
+  #contenedor-footer {
+    width: 1400px;
+    margin: 0 auto;
+  }
+  body::after {
+    /*posiciono una linea horizontal que ocupe todo el ancho del body y que esté exactamente a la misma altura del border-top del navbar del menú de escritorio. De otra forma se notarían los márgenes añadidos*/
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #031a03;
+    position: absolute;
+    top: 135.5px;
+  }
+}
+/*partes específicas del encabezado, recordando que está tanto en el header como en el footer*/
+@media screen and (min-width: 1000px) {
+  .encabezado {
+    margin: 1rem 2rem;
+  }
+}
+.encabezado .logo .imagen-logo {
+  max-width: 100px;
+  min-width: 50px;
+  height: auto;
+}
+.encabezado .logo .imagen-logo #logo-diurno {
+  max-width: 100%;
+  height: auto;
+}
+.encabezado .logo .texto-logo {
+  color: #31c5b7;
+  font-weight: bold;
+}
+.encabezado .logo .texto-logo p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .encabezado .logo .texto-logo p {
+    padding-left: 1rem;
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .encabezado .logo .texto-logo p {
+    font-size: xx-large;
+  }
+}
+.encabezado .boton-contacto {
+  margin: 0 1rem;
+}
+
+header {
+  /*Menú para móvil*/
+  /*Fin menú para móvil*/
+  /*Menú para tablet*/
+  /*Fin menú para tablet*/
+}
+@media screen and (max-width: 768px) {
+  header #hamburguesa-navbar {
+    position: absolute;
+    background-color: #31c5b7;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 9999;
+  }
+  header #hamburguesa-navbar span {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color: #fafafa;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrar el icono*/
+    transition: 0.3s;
+  }
+  header #hamburguesa-navbar span::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+    top: -8px;
+  }
+  header #hamburguesa-navbar span::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #fafafa;
+    height: 3px;
+    width: 30px;
+    transition: 0.3s;
+    top: 8px;
+  }
+  header #hamburguesa-navbar.active span {
+    background-color: transparent;
+  }
+  header #hamburguesa-navbar.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  header #hamburguesa-navbar.active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  header #navbar {
+    position: absolute;
+    transform: translateX(-100%); /*para que no se vea el menu*/
+    transition: 0.5s all;
+    background-color: #afe4f3;
+    z-index: 1;
+  }
+  header #navbar .menu {
+    width: 100%;
+  }
+  header #navbar .menu a {
+    text-decoration: none;
+    color: #065f88;
+    display: block;
+    padding: 1rem 2rem 1rem 5rem;
+    text-align: right;
+  }
+  header #navbar .menu a:active {
+    background-color: #31c5b7;
+    font-weight: bold;
+    color: #fafafa;
+  }
+  header #navbar.active {
+    transform: translateX(0); /*para que se vea el menu*/
+  }
+}
+
+/*Fin header*/
+/*Aplicable a todos los botones CTA de la página*/
+.boton-contacto {
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: #afe4f3;
+  border-radius: 32px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+}
+.boton-contacto:active, .boton-contacto:hover {
+  transition: 0.2s all;
+  transform: scale(1.1);
+}
+
+/*Para el menú del móvil, como uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 50px;
+  }
+}
+/*parte de flex*/
+/*el .encabezado es aplicable en header y footer*/
+.encabezado {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.encabezado .logo {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .encabezado .logo .texto-logo {
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=principal.css.map */
