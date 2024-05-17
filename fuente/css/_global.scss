@@ -1,3 +1,5 @@
+@use "sass:map";
+
 *{
     font-family: $fuente-principal, $fuente-texto, 'sans-serif';
     box-sizing: border-box;

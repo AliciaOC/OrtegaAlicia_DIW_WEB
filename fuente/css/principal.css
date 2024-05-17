@@ -1,0 +1,19 @@
+/*Colores*/
+/*Fuentes*/
+/*Rupturas*/
+/*Para los menu .a de los navbar medianos y grandes*/
+/*Dentro del carrusel, para distribuir el contenido a la izquierda o derecha: flex-start o flex-end en posicion*/
+/*Para centrar el contenido del main cuando solo hay una columna*/
+/*Rupturas*/
+* {
+  font-family: "Comfortaa", "Lexend", "sans-serif";
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}/*# sourceMappingURL=principal.css.map */

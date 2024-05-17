@@ -9,11 +9,24 @@ $negro:#031a03;
 $fuente-principal: 'Comfortaa';
 $fuente-texto: 'Lexend';
 
-/*Rupturas*/
-$ruptura: (
-    p:500px,
-    m:768px,
-    m-g:1000px,
-    g:1279px,
-    xg:1400px
+/*Imágenes del carrusel del home según su tamaño*/
+$imagenes-carrusel-movil:(
+    ansiedad: "../imagenes/ansiedad-movil.webp",
+    depresion: "../imagenes/depresion-movil.webp",
+    sexual: "../imagenes/sexual-movil.webp",
+    pareja: "../imagenes/pareja-movil.webp"
+);
+
+$imagenes-carrusel-tablet:(
+    ansiedad: "../imagenes/ansiedad-tablet.webp",
+    depresion: "../imagenes/depresion-tablet.webp",
+    sexual: "../imagenes/sexual-tablet.webp",
+    pareja: "../imagenes/pareja-tablet.webp"
+);
+
+$imagenes-carrusel-escritorio:(
+    ansiedad: "../imagenes/ansiedad-escritorio.webp",
+    depresion: "../imagenes/depresion-escritorio.webp",
+    sexual: "../imagenes/sexual-escritorio.webp",
+    pareja: "../imagenes/pareja-escritorio.webp"
 );
