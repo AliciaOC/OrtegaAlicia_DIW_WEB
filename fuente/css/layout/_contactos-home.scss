@@ -1,0 +1,33 @@
+/*Parte de contactos del home, dentro del main*/
+#contactos_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+/*parte de contacto para pantallas grandes*/
+@media (min-width: 1000px) {
+    & {
+      margin: 4rem;
+      display: grid;
+      grid-template: 1fr 1fr 1fr / repeat(2, 1fr);
+    }
+    h5 {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: center;
+    }
+    .formas_contactos {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    button {
+      grid-column: 1;
+      grid-row: 3;
+      margin: 0 auto;
+    }
+    #mapa_home {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+    }
+  }
+}

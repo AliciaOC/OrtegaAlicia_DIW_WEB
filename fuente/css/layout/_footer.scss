@@ -1,0 +1,23 @@
+/*Footer*/
+.redes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*footer para pantallas grandes*/
+@include mixin-media-query-MIN(m) {
+    #contenedor-footer {
+      display: grid;
+      grid-template: 1fr / repeat(3, 1fr);
+
+      .encabezado {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+      }
+      #contacto-footer {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
+    }
+}

@@ -1,4 +1,9 @@
 /*------------------------------------*/
+/*A partir de aquí apareceran las partes que correspondan con flex o grid*/
+/*------------------------------------*/
+
+/*Partes que corresponden a elementos que están en varias partes de la página*/
+
 /*el .encabezado es aplicable en header y footer*/
 .encabezado {
     display: flex;
@@ -15,3 +20,10 @@
     display: flex;
     align-self: center;
 }
+
+/*En la pagina de home, en el main y footer*/
+.formas_contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

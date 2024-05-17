@@ -1,0 +1,35 @@
+/*Parte de terapeuta del home*/
+#terapeuta-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@include mixin-media-query-MIN(m-g){
+    #terapeuta-home {
+      margin: 4rem;
+      display: grid;
+      grid-template-areas: "imagen titulo" "imagen texto" "imagen cta";
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      align-items: center;
+
+      picture {
+        grid-area: imagen;
+      }
+    
+      h5 {
+        grid-area: titulo;
+        align-self: end;
+      }
+      
+      #texto_terapeuta_home {
+        grid-area: texto;
+      }
+      
+      button {
+        grid-area: cta;
+        align-self: start;
+      }
+    }
+
+  }

@@ -46,7 +46,8 @@ body {
   min-width: 50px;
   height: auto;
 }
-.encabezado .logo .imagen-logo #logo-diurno {
+.encabezado .logo .imagen-logo #logo-diurno,
+.encabezado .logo .imagen-logo #logo-nocturno {
   max-width: 100%;
   height: auto;
 }
@@ -86,6 +87,21 @@ body {
   font-size: larger;
 }
 
+/*En la página de home, en el main y footer*/
+.formas_contacto {
+  padding-bottom: 3rem;
+}
+
+.telefono {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telefono:active {
+  color: #afe4f3;
+}
+
+/*------------------------------------*/
 /*Estilos por partes específicas de la página*/
 /*Header*/
 @media screen and (min-width: 768px) {
@@ -223,7 +239,7 @@ body {
 }
 /*Fin menú escritorio*/
 /*Fin header*/
-/*Main*/
+/*Main del home*/
 /*Para el menú del móvil uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
 @media screen and (max-width: 768px) {
   main {
@@ -343,7 +359,144 @@ body {
 }
 
 /*Fin parte carrusel*/
-/*Fin main*/
+/*Parte de terapeuta del home*/
+#terapeuta-home {
+  margin: 2rem;
+  /*para pantallas medianas y grandes*/
+}
+#terapeuta-home h5 {
+  color: #31c5b7;
+  font-size: larger;
+}
+#terapeuta-home #texto_terapeuta_home p {
+  text-align: center;
+  padding: 1rem;
+  font-family: "Lexend", "sans-serif", "Comfortaa";
+  color: #065f88;
+}
+@media screen and (min-width: 1000px) {
+  #terapeuta-home picture {
+    padding-left: 1rem;
+  }
+  #terapeuta-home h5 {
+    color: #31c5b7;
+    font-size: large;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #terapeuta-home #texto_terapeuta_home {
+    padding: 0 2rem;
+  }
+  #terapeuta-home button {
+    margin: 0 auto;
+  }
+}
+
+/*fin parte terapeuta del home*/
+/*Contacto del home*/
+#contactos_home {
+  margin: 2rem;
+}
+#contactos_home h5 {
+  color: #31c5b7;
+  font-size: larger;
+}
+#contactos_home .formas_contacto p,
+#contactos_home .formas_contacto a {
+  color: #065f88;
+}
+#contactos_home button {
+  margin-bottom: 1rem;
+  /*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
+}
+@media screen and (max-width: 1000px) {
+  #contactos_home button {
+    display: none;
+  }
+}
+#contactos_home #mapa_home {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+#contactos_home #mapa_home iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*Fin contacto del home*/
+/*Fin main HOME*/
+/*Footer*/
+footer {
+  background-color: #065f88;
+}
+footer #contenedor-footer .encabezado {
+  padding-top: 1rem;
+}
+footer #contenedor-footer .encabezado .logo .texto-logo {
+  padding-left: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  footer #contenedor-footer .encabezado .logo .texto-logo p {
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer #contenedor-footer .encabezado .logo .texto-logo p {
+    font-size: xx-large;
+  }
+}
+footer #contenedor-footer #contacto-footer .formas_contacto .calle,
+footer #contenedor-footer #contacto-footer .formas_contacto .telefono {
+  color: #31c5b7;
+}
+footer #contenedor-footer #contacto-footer .redes a img {
+  max-width: 50px;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  footer #contenedor-footer #contacto-footer .formas_contacto .telefono:hover {
+    transition: 0.5s;
+    color: #afe4f3;
+    font-weight: bold;
+  }
+  footer #contenedor-footer #contacto-footer .redes a img:hover {
+    transition: 0.5s;
+    transform: scale(1.5);
+  }
+}
+footer #contenedor-footer section {
+  margin: 1rem;
+}
+
+/*fin footer*/
+/*------------------------------------*/
+/*A partir de aquí apareceran las partes que correspondan con flex o grid*/
+/*------------------------------------*/
+/*Partes que corresponden a elementos que están en varias partes de la página*/
+/*el .encabezado es aplicable en header y footer*/
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+}
+.encabezado .logo {
+  display: flex;
+  align-items: center;
+}
+
+/*Aplica a los CTA de toda la página*/
+.boton-contacto {
+  display: flex;
+  align-self: center;
+}
+
+/*En la pagina de home, en el main y footer*/
+.formas_contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*----------------------------------------------------------------------------*/
 /*Parte del header*/
 @media screen and (min-width: 768px) {
@@ -373,23 +526,6 @@ body {
   }
 }
 /*------------------------------------*/
-/*el .encabezado es aplicable en header y footer*/
-.encabezado {
-  display: flex;
-  justify-content: space-between;
-}
-.encabezado .logo {
-  display: flex;
-  align-items: center;
-}
-
-/*Aplica a los CTA de toda la página*/
-.boton-contacto {
-  display: flex;
-  align-self: center;
-}
-
-/*------------------------------------*/
 /* Carrusel */
 #carrusel {
   display: flex;
@@ -408,4 +544,91 @@ body {
 #botones-navegacion-carrusel {
   display: flex;
   justify-content: space-between;
+}
+
+/*Parte de terapeuta del home*/
+#terapeuta-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  #terapeuta-home {
+    margin: 4rem;
+    display: grid;
+    grid-template-areas: "imagen titulo" "imagen texto" "imagen cta";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    align-items: center;
+  }
+  #terapeuta-home picture {
+    grid-area: imagen;
+  }
+  #terapeuta-home h5 {
+    grid-area: titulo;
+    align-self: end;
+  }
+  #terapeuta-home #texto_terapeuta_home {
+    grid-area: texto;
+  }
+  #terapeuta-home button {
+    grid-area: cta;
+    align-self: start;
+  }
+}
+/*Parte de contactos del home, dentro del main*/
+#contactos_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*parte de contacto para pantallas grandes*/
+}
+@media (min-width: 1000px) {
+  #contactos_home {
+    margin: 4rem;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/repeat(2, 1fr);
+  }
+  #contactos_home h5 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+  }
+  #contactos_home .formas_contactos {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #contactos_home button {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0 auto;
+  }
+  #contactos_home #mapa_home {
+    grid-column: 2;
+    grid-row: 1/span 3;
+  }
+}
+
+/*Footer*/
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*footer para pantallas grandes*/
+@media screen and (min-width: 768px) {
+  #contenedor-footer {
+    display: grid;
+    grid-template: 1fr/repeat(3, 1fr);
+  }
+  #contenedor-footer .encabezado {
+    grid-column: 1/span 3;
+    grid-row: 1;
+  }
+  #contenedor-footer #contacto-footer {
+    grid-column: 2;
+    grid-row: 1/span 2;
+    align-self: center;
+  }
 }/*# sourceMappingURL=principal.css.map */

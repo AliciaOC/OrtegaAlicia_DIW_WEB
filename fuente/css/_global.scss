@@ -50,7 +50,8 @@ body {
       min-width: 50px;
       height: auto;
 
-      #logo-diurno {
+      #logo-diurno, 
+      #logo-nocturno {
         max-width: 100%;
         height: auto;
       }
@@ -95,6 +96,21 @@ body {
   font-size: larger;
 }
 
+/*En la página de home, en el main y footer*/
+.formas_contacto {
+  padding-bottom: 3rem;
+}
+
+.telefono {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telefono:active {
+  color: #afe4f3;
+}
+
+/*------------------------------------*/
 /*Estilos por partes específicas de la página*/
 /*Header*/
 @include mixin-media-query-MIN(m){
@@ -233,7 +249,7 @@ body {
   /*Fin menú escritorio*/
 /*Fin header*/
 
-/*Main*/
+/*Main del home*/
 /*Para el menú del móvil uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
 @include mixin-media-query-MAX(m){
   main {
@@ -336,4 +352,135 @@ body {
   }
 }
 /*Fin parte carrusel*/
-/*Fin main*/
+/*Parte de terapeuta del home*/
+#terapeuta-home {
+  margin: 2rem;
+
+  h5 {
+    color: $verde;
+    font-size: larger;
+  }
+
+  #texto_terapeuta_home p {
+    text-align: center;
+    padding: 1rem;
+    font-family: "Lexend", "sans-serif", "Comfortaa";
+    color: #065f88;
+  }
+
+  /*para pantallas medianas y grandes*/
+@include mixin-media-query-MIN(m-g){
+  picture {
+    padding-left: 1rem;
+  }
+  h5 {
+    color: #31c5b7;
+    font-size: large;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #texto_terapeuta_home {
+    padding: 0 2rem;
+  }
+  button {
+    margin: 0 auto;
+  }
+}
+}
+/*fin parte terapeuta del home*/
+
+/*Contacto del home*/
+#contactos_home {
+  margin: 2rem;
+
+  h5 {
+    color: $verde;
+    font-size: larger;
+  }
+
+  .formas_contacto p,
+  .formas_contacto a {
+    color: $azul-oscuro;
+  }
+
+  button {
+    margin-bottom: 1rem;
+    /*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
+    @include mixin-media-query-MAX(m-g){
+      & {
+        display: none;
+      }
+    }
+  }
+
+  #mapa_home {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+/*Fin contacto del home*/
+/*Fin main HOME*/
+
+/*Footer*/
+footer {
+  background-color: $azul-oscuro;
+
+  #contenedor-footer{
+    .encabezado{
+      padding-top: 1rem;
+      
+      .logo {
+        .texto-logo{
+          padding-left: 1rem;
+
+          @include mixin-media-query-MIN(m-g){
+            p{
+              font-size: x-large;
+            }
+          }
+          @include mixin-media-query-MIN(xg){
+            p{
+              font-size: xx-large;
+            }
+          }
+        }
+      }
+    }
+    #contacto-footer{
+      .formas_contacto{
+        .calle,
+        .telefono{
+          color: $verde;
+        }
+      }
+      .redes a img{
+        max-width: 50px;
+        height: auto;
+      }
+
+      @include mixin-media-query-MIN(m){
+        .formas_contacto .telefono:hover {
+          transition: 0.5s;
+          color: #afe4f3;
+          font-weight: bold;
+        }
+        
+        .redes a img:hover {
+          transition: 0.5s;
+          transform: scale(1.5);
+        }
+      }
+    }
+
+    section{
+      margin: 1rem;
+    }
+  }
+}
+/*fin footer*/
