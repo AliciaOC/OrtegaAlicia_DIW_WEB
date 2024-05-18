@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tu psicologa</title>
+    <link rel="stylesheet" href="../css/principal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/hamburguesa.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="encabezado">
+        <article class="logo">
+          <a class="imagen-logo" href="../index.html">
+            <img
+              id="logo-diurno"
+              src="../imagenes/logo_claro.webp"
+              alt="logo"
+            />
+          </a>
+
+          <div class="texto-logo">
+            <p>Clínica</p>
+            <p>Psicológica</p>
+            <p>Adelante</p>
+          </div>
+        </article>
+        <button class="boton-contacto">
+          <a href="contacto.html">¿Hablamos?</a>
+        </button>
+      </section>
+      <section id="hamburguesa-navbar"><span></span></section>
+      <section id="navbar">
+        <article id="nav-terapias" class="menu">
+          <a href="terapias.html">Terapias Ofrecidas</a>
+          <a href="terapias.html#ansiedad-terapia">Ansiedad</a>
+          <a href="terapias.html#depresion-terapia">Depresión</a>
+          <a href="terapias.html#sexual-terapia">Trastorno Sexual</a>
+          <a href="terapias.html#pareja-terapia">Terapia de Pareja</a>
+        </article>
+        <article id="nav-psicologa" class="menu">
+          <a href="#">Sobre tu Psicóloga</a>
+          <a href="#sesiones">Cómo son las Sesiones</a>
+        </article>
+      </section>
+    </header>
+
+    <main>
+      <section id="terapeuta-home">
+        <h5 class="titulo">Mari Sol García Martínez</h5>
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 768px)"
+            srcset="imagenes/psicologa_290.webp" />
+          <img
+            class="imagen imagen_terapeuta"
+            src="../imagenes/psicologa_400.webp"
+            alt="foto de la psicóloga"
+        /></picture>
+        <article id="texto_terapeuta_home" class="texto">
+          <p>
+            Desde que me gradué en Psicología por la Universidad de Granada he
+            acumulado más de 10 años de experiencia tratando trastornos
+            psicológicos en adultos.
+          </p>
+          <p>
+            Mi compromiso es ofrecer la garantía de calidad y profesionalidad en
+            las terapias que aplico para garantizar así el mejor tratamiento
+            para mis clientes, por ello sigo la corriente cognitiva-conductual
+            ya que es la que mayor efectividad ha demostrado hoy día.
+          </p>
+          <p>
+            Me preocupo por crear un entorno seguro y de confianza para mis
+            clientes para que puedan lograr sus objetivos.
+          </p>
+        </article>
+        <button class="boton-contacto">
+          <a href="html/contacto.html">¿Hablamos?</a>
+        </button>
+      </section>
+      <section id="valores-psicologa">
+        <div class="valores-contenedor">
+          <h6 class="subtitulo">Valores por los que me guío</h6>
+          <article class="valor">
+            <img src="../imagenes/" alt="Espacio Seguro" />
+            <p>Espacio Seguro</p>
+          </article>
+          <article class="valor">
+            <img src="../imagenes/" alt="Orientación al Cliente" />
+            <p>Orientación al Cliente</p>
+          </article>
+          <article class="valor">
+            <img src="../imagenes/" alt="Calidad" />
+            <p>Calidad</p>
+          </article>
+          <article class="valor">
+            <img src="../imagenes/" alt="Cognitivo-Conductual" />
+            <p>Cognitivo-Conductual</p>
+          </article>
+        </div>
+        <button class="boton-contacto">
+          <a href="contacto.html">¿Hablamos?</a>
+        </button>
+      </section>
+      <section id="sesiones">
+        <h5 class="titulo">Cómo son las Sesiones</h5>
+        <article id="proceso-terapeutico">
+          <p class="texto">
+            Las sesiones pueden ser presenciales o por videollamada, duran
+            alrededor de <span>1 hora</span> y al princio lo más común es que
+            las sesiones sean semanales. El precio por cada sesión es de
+            <span>50€</span>.
+          </p>
+          <p class="texto">
+            Cada proceso terapéutico es único, pero estas son las fases por la
+            que pasarás:
+          </p>
+          <ol>
+            <li>Inicio: Dar a conocer lo que se siente.</li>
+            <li>Evaluación: Saber lo que ocurre.</li>
+            <li>Autoconocimiento: Aprender los patrones.</li>
+            <li>Desarrollo de las habilidades: Romper el ciclo.</li>
+            <li>Revisión: Evaluar los cambios.</li>
+            <li>
+              Afianzar las mejoras: Herramientas para mantener el progreso.
+            </li>
+            <li>Cierre: Última sesión.</li>
+            <li>Seguimiento: comprobación del estado tiempo después.</li>
+          </ol>
+        </article>
+        <img
+          class="imagen"
+          src="../imagenes/sesiones-grafico.webp"
+          alt="gráfico de progresión en las sesiones"
+        />
+        <button class="boton-contacto">
+          <a href="contacto.html">¿Hablamos?</a>
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <div id="contenedor-footer">
+        <section class="encabezado">
+          <article class="logo">
+            <a class="imagen-logo" href="../index.html">
+              <img
+                id="logo-nocturno"
+                src="../imagenes/logo_oscuro.webp"
+                alt="logo"
+              />
+            </a>
+
+            <div class="texto-logo">
+              <p>Clínica</p>
+              <p>Psicológica</p>
+              <p>Adelante</p>
+            </div>
+          </article>
+          <button class="boton-contacto">
+            <a href="contacto.html">¿Hablamos?</a>
+          </button>
+        </section>
+        <section id="contacto-footer">
+          <article class="formas_contacto">
+            <p class="calle">Calle La Salud Mental s/n</p>
+            <a class="telefono" href="tel:+34777777777">+34 777777777</a>
+          </article>
+          <article class="redes">
+            <a href="#">
+              <img
+                src="../imagenes/linkedin.webp"
+                alt="enlace a cuenta de linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="../imagenes/insta.webp"
+                alt="enlace a cuenta de instagram"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="../imagenes/facebook.webp"
+                alt="enlace a cuenta de facebook"
+              />
+            </a>
+          </article>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

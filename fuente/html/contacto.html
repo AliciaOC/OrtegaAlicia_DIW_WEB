@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hablemos y Adelante</title>
+    <link rel="stylesheet" href="../css/principal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/hamburguesa.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="encabezado">
+        <article class="logo">
+          <a class="imagen-logo" href="../index.html">
+            <img
+              id="logo-diurno"
+              src="../imagenes/logo_claro.webp"
+              alt="logo"
+            />
+          </a>
+
+          <div class="texto-logo">
+            <p>Clínica</p>
+            <p>Psicológica</p>
+            <p>Adelante</p>
+          </div>
+        </article>
+        <button class="boton-contacto">
+          <a href="#">¿Hablamos?</a>
+        </button>
+      </section>
+      <section id="hamburguesa-navbar"><span></span></section>
+      <section id="navbar">
+        <article id="nav-terapias" class="menu">
+          <a href="terapias.html">Terapias Ofrecidas</a>
+          <a href="terapias.html#ansiedad-terapia">Ansiedad</a>
+          <a href="terapias.html#depresion-terapia">Depresión</a>
+          <a href="terapias.html#sexual-terapia">Trastorno Sexual</a>
+          <a href="terapias.html#pareja-terapia">Terapia de Pareja</a>
+        </article>
+        <article id="nav-psicologa" class="menu">
+          <a href="psicologa.html">Sobre tu Psicóloga</a>
+          <a href="psicologa.html#sesiones">Cómo son las Sesiones</a>
+        </article>
+      </section>
+    </header>
+
+    <main>
+      <section id="formulario-contacto">
+        <article id="titular-imagen-contacto">
+          <h5 class="titulo">Formulario de contacto</h5>
+          <img src="../imagenes/" alt="imagen de un sobre" />
+        </article>
+        <form>
+          <div id="primera-parte-formulario">
+            <fieldset id="datos-cliente">
+              <legend>Datos personales</legend>
+              <label class="casilla-formulario" for="nombre-apellidos"
+                >Nombre y Apellidos:</label
+              >
+              <input
+                type="text"
+                id="nombre-apellidos"
+                name="nombre-apellidos"
+                required
+              />
+              <label class="casilla-formulario" for="edad">Edad:</label>
+              <input type="number" id="edad" name="edad" required />
+            </fieldset>
+            <fieldset id="forma-contacto-cliente">
+              <legend>Forma de Contacto</legend>
+              <!--Con un radio puede elegir si quiere ser contactado por e-mail o por telefono-->
+              <input
+                type="radio"
+                id="email-cliente"
+                name="contacto"
+                value="email"
+                checked
+              />
+              <label for="email-cliente">E-mail</label>
+              <input
+                type="radio"
+                id="telefono-cliente"
+                name="contacto"
+                value="telefono"
+              />
+              <label for="telefono-cliente">Teléfono</label>
+              <input
+                class="casilla-formulario"
+                type="text"
+                id="contacto"
+                name="contacto"
+                required
+              />
+            </fieldset>
+            <fieldset id="disponibilidad-cliente">
+              <legend>Disponibilidad</legend>
+              <label class="casilla-formulario" for="disponibilidad"
+                >Ej: Lunes a Viernes de 9:00 a 14:00</label
+              >
+              <textarea id="disponibilidad" name="disponibilidad" required>
+              </textarea>
+            </fieldset>
+          </div>
+          <fieldset id="motivo-consulta">
+            <legend>Motivo de la consulta</legend>
+            <textarea id="motivo" name="motivo" required></textarea>
+          </fieldset>
+          <button class="boton-contacto" type="submit">Enviar</button>
+        </form>
+      </section>
+      <section id="contactos_home">
+        <h5 class="titulo">Contacto</h5>
+        <article class="formas_contacto">
+          <p class="calle">Calle La Salud Mental s/n</p>
+          <a class="telefono" href="tel:+34777777777">+34 777777777</a>
+        </article>
+
+        <article id="mapa_home">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.337261477686!2d-3.6189490242935305!3d37.192218072138026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcf9589cae9d%3A0xd64971351144a933!2sIES%20Francisco%20Ayala!5e0!3m2!1ses!2ses!4v1707394392413!5m2!1ses!2ses"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div id="contenedor-footer">
+        <section class="encabezado">
+          <article class="logo">
+            <a class="imagen-logo" href="../index.html">
+              <img
+                id="logo-nocturno"
+                src="../imagenes/logo_oscuro.webp"
+                alt="logo"
+              />
+            </a>
+
+            <div class="texto-logo">
+              <p>Clínica</p>
+              <p>Psicológica</p>
+              <p>Adelante</p>
+            </div>
+          </article>
+          <button class="boton-contacto">
+            <a href="#">¿Hablamos?</a>
+          </button>
+        </section>
+        <section id="contacto-footer">
+          <article class="formas_contacto">
+            <p class="calle">Calle La Salud Mental s/n</p>
+            <a class="telefono" href="tel:+34777777777">+34 777777777</a>
+          </article>
+          <article class="redes">
+            <a href="#">
+              <img
+                src="../imagenes/linkedin.webp"
+                alt="enlace a cuenta de linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="../imagenes/insta.webp"
+                alt="enlace a cuenta de instagram"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="../imagenes/facebook.webp"
+                alt="enlace a cuenta de facebook"
+              />
+            </a>
+          </article>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
