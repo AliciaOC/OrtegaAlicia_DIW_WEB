@@ -1,0 +1,17 @@
+/*Página sobre la psicológa*/
+
+#valores-psicologa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .valores-contenedor .valor{
+        display: flex;
+        align-items: center;
+    }
+}
+
+#sesiones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

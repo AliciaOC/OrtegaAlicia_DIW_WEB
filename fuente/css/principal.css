@@ -512,11 +512,6 @@ footer #contenedor-footer section {
 #total-terapias {
   margin: 2em;
 }
-#total-terapias .terapia {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
 #total-terapias .terapia .titulo {
   text-align: center;
   margin-top: 3rem;
@@ -525,19 +520,63 @@ footer #contenedor-footer section {
   text-align: center;
   margin-top: 0;
 }
-#total-terapias .terapia .texto {
-  text-align: justify;
+#total-terapias .terapia img {
+  max-width: 325px;
+  height: auto;
 }
 #total-terapias .terapia .afecciones-relacionadas {
-  text-align: center;
   border-left: #031a03 dotted 1px;
 }
 #total-terapias .terapia .afecciones-relacionadas p {
+  text-align: center;
   font-family: "Lexend";
   padding-top: 1rem;
 }
 #total-terapias .terapia .boton-contacto {
   margin: 3rem;
+}
+
+/*Fin main TERAPIAS*/
+/*Main de PSICÓLOGA*/
+#valores-psicologa {
+  background-color: #31c5b7;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#valores-psicologa .valores-contenedor {
+  margin-bottom: 2rem;
+}
+#valores-psicologa .valores-contenedor .subtitulo {
+  font-size: larger;
+}
+#valores-psicologa .valores-contenedor .valor {
+  border-left: #afe4f3 dashed 2px;
+  padding: 1rem;
+}
+#valores-psicologa .valores-contenedor .valor img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+#sesiones {
+  margin: 2rem;
+  padding-bottom: 2rem;
+}
+#sesiones #proceso-terapeutico p span {
+  font-family: "Lexend";
+  font-weight: bold;
+  color: #31c5b7;
+}
+#sesiones #proceso-terapeutico ol {
+  margin-bottom: 3rem;
+}
+#sesiones #proceso-terapeutico ol li {
+  font-family: "Lexend";
+  padding-bottom: 1rem;
+}
+#sesiones .imagen {
+  padding-bottom: 3rem;
 }
 
 /*------------------------------------*/
@@ -678,6 +717,30 @@ footer #contenedor-footer section {
     grid-column: 2;
     grid-row: 1/span 3;
   }
+}
+
+/*Página de terapias*/
+.terapia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Página sobre la psicológa*/
+#valores-psicologa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#valores-psicologa .valores-contenedor .valor {
+  display: flex;
+  align-items: center;
+}
+
+#sesiones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*Footer*/

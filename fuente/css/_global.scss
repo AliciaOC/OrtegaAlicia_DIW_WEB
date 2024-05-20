@@ -526,31 +526,77 @@ footer {
 #total-terapias{
   margin: 2em;
   .terapia{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  .titulo{
-    text-align: center;
-    margin-top: 3rem;
-  }
-  .subtitulo{
-    text-align: center;
-    margin-top: 0;
-  }
-  .texto{
-    text-align: justify;
-  }
-  .afecciones-relacionadas{
-    text-align: center;
-    border-left: $negro dotted 1px;
-    p{
-      font-family: $fuente-texto;
-      padding-top: 1rem;
+    .titulo{
+      text-align: center;
+      margin-top: 3rem;
+      }
+    .subtitulo{
+      text-align: center;
+      margin-top: 0;
+    }
+    img{
+      max-width: 325px;
+      height: auto;
+    }
+    .afecciones-relacionadas{
+      border-left: $negro dotted 1px;
+      p{
+        text-align: center;
+        font-family: $fuente-texto;
+        padding-top: 1rem;
+      }
+    }
+    .boton-contacto{
+      margin: 3rem;
     }
   }
-  .boton-contacto{
-    margin: 3rem;
+}
+/*Fin main TERAPIAS*/
+
+/*Main de PSICÓLOGA*/
+#valores-psicologa{
+  background-color: $verde;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .valores-contenedor{
+    margin-bottom: 2rem;
+    .subtitulo{
+      font-size: larger;  
+    }
+    .valor{
+      border-left: $azul-claro dashed 2px;
+      padding: 1rem;
+
+      img{
+        max-width: 100px;
+        height: auto;
+        border-radius: 50%;
+      } 
+    }
   }
 }
+
+#sesiones{
+  margin: 2rem;
+  padding-bottom: 2rem;
+
+  #proceso-terapeutico{
+    p span{
+      font-family: $fuente-texto;
+      font-weight: bold;
+      color: $verde;
+    }
+    ol{
+      margin-bottom: 3rem;
+      li{
+        font-family: $fuente-texto;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .imagen{
+    padding-bottom: 3rem;
+  }
 }
 
