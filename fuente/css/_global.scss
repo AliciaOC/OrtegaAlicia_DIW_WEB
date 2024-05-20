@@ -100,6 +100,17 @@ body {
 .titulo {
   font-size: larger;
 }
+/*Todos lo .titulos verdes menos algunos del carrusel*/
+section h5, 
+article h5{
+  color: $verde;
+}
+
+/*Lo ssubtitulos de terapias y psicologa*/
+.subtitulo {
+  color: $azul-oscuro;
+  font-size: medium;
+}
 
 /*En la página de home, en el main y footer*/
 .formas_contacto {
@@ -116,8 +127,8 @@ body {
 }
 
 /*------------------------------------*/
-/*Estilos por partes específicas de la página*/
-/*Header*/
+/*Estilos por partes específicas de las páginas*/
+/*Header, común a todas las páginas*/
 @include mixin-media-query-MIN(m){
   header .encabezado .logo .texto-logo p{
     padding-left: 1rem;
@@ -254,7 +265,65 @@ body {
   /*Fin menú escritorio*/
 /*Fin header*/
 
-/*Main del home*/
+/*Footer, común a todas las páginas*/
+footer {
+  background-color: $azul-oscuro;
+
+  #contenedor-footer{
+    .encabezado{
+      padding-top: 1rem;
+      
+      .logo {
+        .texto-logo{
+          padding-left: 1rem;
+
+          @include mixin-media-query-MIN(m-g){
+            p{
+              font-size: x-large;
+            }
+          }
+          @include mixin-media-query-MIN(xg){
+            p{
+              font-size: xx-large;
+            }
+          }
+        }
+      }
+    }
+    #contacto-footer{
+      .formas_contacto{
+        .calle,
+        .telefono{
+          color: $verde;
+        }
+      }
+      .redes a img{
+        max-width: 50px;
+        height: auto;
+      }
+
+      @include mixin-media-query-MIN(m){
+        .formas_contacto .telefono:hover {
+          transition: 0.5s;
+          color: #afe4f3;
+          font-weight: bold;
+        }
+        
+        .redes a img:hover {
+          transition: 0.5s;
+          transform: scale(1.5);
+        }
+      }
+    }
+
+    section{
+      margin: 1rem;
+    }
+  }
+}
+/*fin footer*/
+
+/*Main del HOME*/
 /*Para el menú del móvil uso posición absoluta, necesito que el main se desplace y deje un espacio arriba equivalente al espacio de #hamburguesa-navbar*/
 @include mixin-media-query-MAX(m){
   main {
@@ -432,60 +501,56 @@ body {
 /*Fin contacto del home*/
 /*Fin main HOME*/
 
-/*Footer*/
-footer {
-  background-color: $azul-oscuro;
-
-  #contenedor-footer{
-    .encabezado{
-      padding-top: 1rem;
-      
-      .logo {
-        .texto-logo{
-          padding-left: 1rem;
-
-          @include mixin-media-query-MIN(m-g){
-            p{
-              font-size: x-large;
-            }
-          }
-          @include mixin-media-query-MIN(xg){
-            p{
-              font-size: xx-large;
-            }
-          }
-        }
-      }
-    }
-    #contacto-footer{
-      .formas_contacto{
-        .calle,
-        .telefono{
-          color: $verde;
-        }
-      }
-      .redes a img{
-        max-width: 50px;
-        height: auto;
-      }
-
-      @include mixin-media-query-MIN(m){
-        .formas_contacto .telefono:hover {
-          transition: 0.5s;
-          color: #afe4f3;
-          font-weight: bold;
-        }
-        
-        .redes a img:hover {
-          transition: 0.5s;
-          transform: scale(1.5);
-        }
-      }
-    }
-
-    section{
-      margin: 1rem;
+/*Main de TERAPIAS*/
+#presentacion-terapias{
+  margin: 2rem;
+  .titulo{
+    text-align: center;
+  }
+  .texto{
+    text-align: justify;
+  }
+  ul li {
+    font-family: $fuente-texto;
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      color:$verde;
     }
   }
+  .boton-contacto{
+    margin: 0 auto;
+  }
 }
-/*fin footer*/
+
+#total-terapias{
+  margin: 2em;
+  .terapia{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  .titulo{
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .subtitulo{
+    text-align: center;
+    margin-top: 0;
+  }
+  .texto{
+    text-align: justify;
+  }
+  .afecciones-relacionadas{
+    text-align: center;
+    border-left: $negro dotted 1px;
+    p{
+      font-family: $fuente-texto;
+      padding-top: 1rem;
+    }
+  }
+  .boton-contacto{
+    margin: 3rem;
+  }
+}
+}
+
