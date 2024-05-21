@@ -602,7 +602,7 @@ footer #contenedor-footer section {
   padding: 1rem;
 }
 #valores-psicologa .valores-contenedor .valor img {
-  max-width: 100px;
+  max-width: 100%;
   height: auto;
   border-radius: 50%;
 }
