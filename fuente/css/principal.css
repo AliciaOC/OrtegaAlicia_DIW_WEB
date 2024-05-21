@@ -590,12 +590,15 @@ footer #contenedor-footer section {
   background-color: #31c5b7;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  /*Parte responsiva para pantallas desde 768*/
+  /*Fin parte responsiva para pantallas desde 768 hasta 1000px*/
+  /*Parte responsiva para pantallas desde 1000px hasta 1400px*/
+}
+#valores-psicologa .subtitulo {
+  font-size: larger;
 }
 #valores-psicologa .valores-contenedor {
   margin-bottom: 2rem;
-}
-#valores-psicologa .valores-contenedor .subtitulo {
-  font-size: larger;
 }
 #valores-psicologa .valores-contenedor .valor {
   border-left: #afe4f3 dashed 2px;
@@ -606,10 +609,48 @@ footer #contenedor-footer section {
   height: auto;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  #valores-psicologa {
+    max-width: 768px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  #valores-psicologa .subtitulo {
+    font-size: large;
+  }
+  #valores-psicologa .valores-contenedor .valor p {
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #valores-psicologa {
+    max-width: 100%;
+    height: auto;
+  }
+  #valores-psicologa .subtitulo {
+    font-size: large;
+  }
+  #valores-psicologa .valores-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #valores-psicologa .valores-contenedor .valor {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-top: #afe4f3 dashed 2px;
+    border-bottom: #afe4f3 dashed 2px;
+  }
+  #valores-psicologa .valores-contenedor .valor p {
+    padding-left: 0;
+  }
+}
 
 #sesiones {
   margin: 2rem;
   padding-bottom: 2rem;
+  /*Parte responsiva a partir de 1000px*/
 }
 #sesiones #proceso-terapeutico p span {
   font-family: "Lexend";
@@ -623,8 +664,34 @@ footer #contenedor-footer section {
   font-family: "Lexend";
   padding-bottom: 1rem;
 }
-#sesiones .imagen {
-  padding-bottom: 3rem;
+#sesiones img {
+  border-radius: 30%;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 1000px) {
+  #sesiones {
+    display: grid;
+    grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
+    grid-template-columns: 1fr 1fr;
+  }
+  #sesiones .titulo {
+    grid-area: titulo;
+    text-align: center;
+  }
+  #sesiones #proceso-terapeutico {
+    grid-area: parrafo;
+  }
+  #sesiones img {
+    grid-area: imagen;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    align-self: center;
+  }
+  #sesiones .boton-contacto {
+    grid-area: boton;
+    margin: 0 auto;
+  }
 }
 
 /*Fin main PSICÓLOGA*/
@@ -849,10 +916,12 @@ fieldset {
   align-items: center;
 }
 
-#sesiones {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media screen and (max-width: 1000px) {
+  #sesiones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*Contacto*/

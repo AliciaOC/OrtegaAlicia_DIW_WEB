@@ -606,12 +606,12 @@ footer {
   background-color: $verde;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
+  .subtitulo{
+    font-size: larger;  
+  }
   .valores-contenedor{
     margin-bottom: 2rem;
-    .subtitulo{
-      font-size: larger;  
-    }
+
     .valor{
       border-left: $azul-claro dashed 2px;
       padding: 1rem;
@@ -621,6 +621,49 @@ footer {
         height: auto;
         border-radius: 50%;
       } 
+    }
+  }
+  /*Parte responsiva para pantallas desde 768*/
+  @include mixin-media-query-MIN(m){
+    &{
+      max-width: 768px;
+      border-radius: 20px;
+      margin: 0 auto;
+      .subtitulo{
+        font-size: large;
+      }
+      .valores-contenedor{
+        .valor p{
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+  /*Fin parte responsiva para pantallas desde 768 hasta 1000px*/
+  /*Parte responsiva para pantallas desde 1000px hasta 1400px*/
+  @include mixin-media-query-MIN(m-g){
+    &{
+      max-width: 100%;
+      height: auto;
+      .subtitulo{
+        font-size: large;
+      }
+      .valores-contenedor{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .valor{
+          display: flex;
+          flex-direction: column;
+          border: none;
+          border-top: $azul-claro dashed 2px;
+          border-bottom: $azul-claro dashed 2px;
+          p{
+            padding-left: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -643,8 +686,36 @@ footer {
       }
     }
   }
-  .imagen{
-    padding-bottom: 3rem;
+  img{
+    border-radius: 30%;
+    margin-bottom: 3rem;
+  }
+  /*Parte responsiva a partir de 1000px*/
+  @include mixin-media-query-MIN(m-g){
+    &{
+      display: grid;
+      grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
+      grid-template-columns: 1fr 1fr;
+      .titulo{
+        grid-area: titulo;
+        text-align: center;
+      }
+      #proceso-terapeutico{
+        grid-area: parrafo;
+      }
+
+      img{
+        grid-area: imagen;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-self: center;
+      }
+      .boton-contacto{
+        grid-area: boton;
+        margin: 0 auto;
+      }
+    }
   }
 }
 /*Fin main PSICÓLOGA*/

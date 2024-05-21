@@ -86,9 +86,11 @@
           <a href="../html/contacto.html">¿Hablamos?</a>
         </button>
       </section>
+
       <section id="valores-psicologa">
+        <h6 class="subtitulo">Valores por los que me guío</h6>
+
         <div class="valores-contenedor">
-          <h6 class="subtitulo">Valores por los que me guío</h6>
           <article class="valor">
             <img
               srcset="
@@ -150,13 +152,13 @@
       <section id="sesiones">
         <h5 class="titulo">Cómo son las Sesiones</h5>
         <article id="proceso-terapeutico">
-          <p class="texto">
+          <p class="texto parrafo1">
             Las sesiones pueden ser presenciales o por videollamada, duran
             alrededor de <span>1 hora</span> y al princio lo más común es que
             las sesiones sean semanales. El precio por cada sesión es de
             <span>50€</span>.
           </p>
-          <p class="texto">
+          <p class="texto parrafo2">
             Cada proceso terapéutico es único, pero estas son las fases por la
             que pasarás:
           </p>
@@ -174,9 +176,16 @@
           </ol>
         </article>
         <img
-          class="imagen"
+          srcset="
+            ../imagenes/grafico-progresion-200.webp 200w,
+            ../imagenes/grafico-progresion-300.webp 300w,
+            ../imagenes/grafico-progresion-400.webp 400w
+          "
+          sizes=" (max-width: 768px) 200px,
+                (min-width: 769px) 300px,
+                (min-width: 1000px) 400px"
           src="../imagenes/grafico-progresion-200.webp"
-          alt="gráfico de progresión en las sesiones"
+          alt="Enfoque Cognitivo-Conductual"
         />
         <button class="boton-contacto">
           <a href="contacto.html">¿Hablamos?</a>

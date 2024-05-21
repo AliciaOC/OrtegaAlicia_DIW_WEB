@@ -11,7 +11,10 @@
 }
 
 #sesiones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixin-media-query-MAX(m-g){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
