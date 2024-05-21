@@ -31,6 +31,16 @@ body {
     position: absolute;
     top: 135.5px;
   }
+  /*Hago lo mismo con el border-botton del navbar del menú de escritorio*/
+  body::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #031a03;
+    position: absolute;
+    top: 187.5px;
+  }
 }
 /*partes específicas del encabezado, recordando que está tanto en el header como en el footer*/
 .encabezado {
@@ -215,6 +225,7 @@ article h5 {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   #navbar {
     border-top: 1px solid #031a03;
+    border-bottom: 1px solid #031a03;
   }
   #navbar #nav-terapias {
     border-bottom: #065f88 dashed 1px;
@@ -237,6 +248,7 @@ article h5 {
 @media screen and (min-width: 1279px) {
   #navbar {
     border-top: 1px solid #031a03;
+    border-bottom: 1px solid #031a03;
     padding: 1rem 0 1rem 2rem;
   }
   #navbar .menu a {
@@ -490,6 +502,7 @@ footer #contenedor-footer section {
 /*Main de TERAPIAS*/
 #presentacion-terapias {
   margin: 2rem;
+  margin-bottom: 3rem;
 }
 #presentacion-terapias .titulo {
   text-align: center;
@@ -501,6 +514,7 @@ footer #contenedor-footer section {
   font-family: "Lexend";
 }
 #presentacion-terapias ul li a {
+  font-family: "Lexend";
   text-decoration: none;
   font-weight: bold;
   color: #31c5b7;
@@ -511,6 +525,9 @@ footer #contenedor-footer section {
 
 #total-terapias {
   margin: 2em;
+}
+#total-terapias .terapia {
+  /*Parte responsiva para pantallas medianas y grandes*/
 }
 #total-terapias .terapia .titulo {
   text-align: center;
@@ -524,6 +541,9 @@ footer #contenedor-footer section {
   max-width: 325px;
   height: auto;
 }
+#total-terapias .terapia .texto {
+  margin: 2rem 0;
+}
 #total-terapias .terapia .afecciones-relacionadas {
   border-left: #031a03 dotted 1px;
 }
@@ -534,6 +554,34 @@ footer #contenedor-footer section {
 }
 #total-terapias .terapia .boton-contacto {
   margin: 3rem;
+}
+@media screen and (min-width: 768px) {
+  #total-terapias .terapia {
+    border: #31c5b7 solid 2px;
+    border-radius: 20px;
+  }
+  #total-terapias .terapia .rotulo .titulo {
+    font-size: x-large;
+  }
+  #total-terapias .terapia img {
+    margin: 0 auto;
+    max-width: 325px;
+  }
+  #total-terapias .terapia .parrafo {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  #total-terapias .terapia .caja-afecciones .afecciones-relacionadas {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #total-terapias .terapia .boton-contacto {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 2rem auto;
+    align-self: start;
+  }
 }
 
 /*Fin main TERAPIAS*/
@@ -760,6 +808,34 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*Parte responsiva para pantallas medianas y grandes*/
+}
+@media screen and (min-width: 768px) {
+  .terapia {
+    display: grid;
+    grid-template: 1fr 2fr 0.5fr/repeat(2, 1fr);
+  }
+  .terapia .rotulo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  .terapia img {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+  .terapia .parrafo {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .terapia .caja-afecciones {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .terapia .boton-contacto {
+    grid-column: 2;
+    grid-row: 3;
+  }
 }
 
 /*Página sobre la psicológa*/

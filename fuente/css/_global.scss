@@ -32,6 +32,16 @@ body {
     position: absolute;
     top: 135.5px;
   }
+  /*Hago lo mismo con el border-botton del navbar del menú de escritorio*/
+  body::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $negro;
+    position: absolute;
+    top: 187.5px;
+  }
 }
 
 /*partes específicas del encabezado, recordando que está tanto en el header como en el footer*/
@@ -218,6 +228,7 @@ article h5{
   @include mixin-media-query-Min-Max(m, g){
     #navbar{
       border-top: $borde-superior;
+      border-bottom: $borde-superior;
 
       #nav-terapias {
         border-bottom: $azul-oscuro dashed 1px;
@@ -243,6 +254,7 @@ article h5{
   @include mixin-media-query-MIN(g){
     #navbar{
       border-top: $borde-superior;
+      border-bottom: $borde-superior;
       padding: 1rem 0 1rem 2rem;
 
       .menu{
@@ -504,6 +516,7 @@ footer {
 /*Main de TERAPIAS*/
 #presentacion-terapias{
   margin: 2rem;
+  margin-bottom: 3rem;
   .titulo{
     text-align: center;
   }
@@ -513,6 +526,7 @@ footer {
   ul li {
     font-family: $fuente-texto;
     a{
+      font-family: $fuente-texto;
       text-decoration: none;
       font-weight: bold;
       color:$verde;
@@ -538,6 +552,9 @@ footer {
       max-width: 325px;
       height: auto;
     }
+    .texto{
+      margin: 2rem 0;
+    }
     .afecciones-relacionadas{
       border-left: $negro dotted 1px;
       p{
@@ -548,6 +565,37 @@ footer {
     }
     .boton-contacto{
       margin: 3rem;
+    }
+    /*Parte responsiva para pantallas medianas y grandes*/
+    @include mixin-media-query-MIN(m){
+      &{
+        border: $verde solid 2px;
+        border-radius: 20px;
+        .rotulo{
+          .titulo{
+            font-size: x-large;
+          }
+        }
+        img{
+          margin: 0 auto;
+          max-width: 325px;
+        }
+        .parrafo{
+          margin-top: 3rem;
+          margin-bottom: 0;
+        }
+        .caja-afecciones{
+          .afecciones-relacionadas{
+            width:fit-content;
+            margin: 0 auto;
+          }
+        }
+        .boton-contacto{
+          width: fit-content;
+          margin: 2rem auto;
+          align-self: start;
+        }        
+      }
     }
   }
 }

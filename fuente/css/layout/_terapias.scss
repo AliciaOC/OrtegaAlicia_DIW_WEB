@@ -3,4 +3,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*Parte responsiva para pantallas medianas y grandes*/
+    @include mixin-media-query-MIN(m){
+        &{
+          display: grid;
+          grid-template: 1fr 2fr 0.5fr/ repeat(2, 1fr);
+          .rotulo{
+            grid-column: 1;
+            grid-row: 1;
+            align-self: start;
+          }
+          img{
+            grid-column: 1;
+            grid-row: 2/3;
+          }
+          .parrafo{
+            grid-column: 2;
+            grid-row: 1;
+          }
+          .caja-afecciones{
+            grid-column: 2;
+            grid-row: 2;
+          }
+          .boton-contacto{
+            grid-column: 2;
+            grid-row: 3;
+          }        
+        }
+      }
 }
