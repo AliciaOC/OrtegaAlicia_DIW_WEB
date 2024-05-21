@@ -12,9 +12,31 @@
 
 #sesiones{
     @include mixin-media-query-MAX(m-g){
-        display: flex;
+       &{ display: flex;
         flex-direction: column;
         align-items: center;
+       }
+    }
+    /*Parte responsiva a partir de 1000px*/
+  @include mixin-media-query-MIN(m-g){
+    &{
+      display: grid;
+      grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
+      grid-template-columns: 1fr 1fr;
+      .titulo{
+        grid-area: titulo;
+        text-align: center;
+      }
+      #proceso-terapeutico{
+        grid-area: parrafo;
+      }
+      img{
+        grid-area: imagen;
+      }
+      .boton-contacto{
+        grid-area: boton;
+      }
     }
 
+    }
 }

@@ -549,7 +549,7 @@ footer {
       margin-top: 0;
     }
     img{
-      max-width: 325px;
+      max-width: 100%;
       height: auto;
     }
     .texto{
@@ -578,7 +578,7 @@ footer {
         }
         img{
           margin: 0 auto;
-          max-width: 325px;
+          max-width: 100%;
         }
         .parrafo{
           margin-top: 3rem;
@@ -613,8 +613,7 @@ footer {
     margin-bottom: 2rem;
 
     .valor{
-      border-left: $azul-claro dashed 2px;
-      padding: 1rem;
+      padding: 0.5rem;
 
       img{
         max-width: 100%;
@@ -653,12 +652,12 @@ footer {
         display: flex;
         justify-content: space-around;
 
+
         .valor{
           display: flex;
           flex-direction: column;
           border: none;
-          border-top: $azul-claro dashed 2px;
-          border-bottom: $azul-claro dashed 2px;
+
           p{
             padding-left: 0;
           }
@@ -693,26 +692,13 @@ footer {
   /*Parte responsiva a partir de 1000px*/
   @include mixin-media-query-MIN(m-g){
     &{
-      display: grid;
-      grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
-      grid-template-columns: 1fr 1fr;
-      .titulo{
-        grid-area: titulo;
-        text-align: center;
-      }
-      #proceso-terapeutico{
-        grid-area: parrafo;
-      }
-
       img{
-        grid-area: imagen;
         max-width: 100%;
         height: auto;
         margin: 0 auto;
         align-self: center;
       }
       .boton-contacto{
-        grid-area: boton;
         margin: 0 auto;
       }
     }
@@ -721,6 +707,7 @@ footer {
 /*Fin main PSICÓLOGA*/
 
 /*Main de CONTACTO*/
+/*primero estas etiquetas que son comunes a varias cajas*/
 input,
 textarea{
   margin-bottom: 1rem;
@@ -737,6 +724,7 @@ fieldset{
   border: none;
   padding: 1rem;
 }
+/*parte en arbol*/
 #formulario-contacto{
   margin: 2rem;
   #titular-imagen-contacto{
@@ -752,6 +740,25 @@ fieldset{
       #datos-cliente{
         #edad{
           width: 50px;
+        }
+      }
+      #forma-contacto-cliente #contacto{
+        width: 100%;      
+      }
+    }
+    /*Parte responsiva para pantallas medianas y grandes*/
+    @include mixin-media-query-MIN(m-g){
+      &{
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 30px;
+        #motivo-consulta{
+          textarea{
+            height: 300px;
+          }
+        }
+        .boton-contacto{
+          margin: 0 auto;
         }
       }
     }

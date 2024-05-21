@@ -7,6 +7,22 @@
 form{
     display: flex;
     flex-direction: column;
+    /*Parte responsiva para pantallas medianas y grandes*/
+    @include mixin-media-query-MIN(m-g){
+        &{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          #primera-parte-formulario{
+            grid-column: 1;
+          }
+          #motivo-consulta{
+            grid-column: 2;
+          }
+          .boton-contacto{
+            grid-column: 1 / span 2;
+          }
+        }
+      }
 }
 
 #datos-cliente{

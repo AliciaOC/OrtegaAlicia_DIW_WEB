@@ -538,7 +538,7 @@ footer #contenedor-footer section {
   margin-top: 0;
 }
 #total-terapias .terapia img {
-  max-width: 325px;
+  max-width: 100%;
   height: auto;
 }
 #total-terapias .terapia .texto {
@@ -565,7 +565,7 @@ footer #contenedor-footer section {
   }
   #total-terapias .terapia img {
     margin: 0 auto;
-    max-width: 325px;
+    max-width: 100%;
   }
   #total-terapias .terapia .parrafo {
     margin-top: 3rem;
@@ -601,8 +601,7 @@ footer #contenedor-footer section {
   margin-bottom: 2rem;
 }
 #valores-psicologa .valores-contenedor .valor {
-  border-left: #afe4f3 dashed 2px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 #valores-psicologa .valores-contenedor .valor img {
   max-width: 100%;
@@ -639,8 +638,6 @@ footer #contenedor-footer section {
     display: flex;
     flex-direction: column;
     border: none;
-    border-top: #afe4f3 dashed 2px;
-    border-bottom: #afe4f3 dashed 2px;
   }
   #valores-psicologa .valores-contenedor .valor p {
     padding-left: 0;
@@ -669,33 +666,20 @@ footer #contenedor-footer section {
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 1000px) {
-  #sesiones {
-    display: grid;
-    grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
-    grid-template-columns: 1fr 1fr;
-  }
-  #sesiones .titulo {
-    grid-area: titulo;
-    text-align: center;
-  }
-  #sesiones #proceso-terapeutico {
-    grid-area: parrafo;
-  }
   #sesiones img {
-    grid-area: imagen;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
     align-self: center;
   }
   #sesiones .boton-contacto {
-    grid-area: boton;
     margin: 0 auto;
   }
 }
 
 /*Fin main PSICÓLOGA*/
 /*Main de CONTACTO*/
+/*primero estas etiquetas que son comunes a varias cajas*/
 input,
 textarea {
   margin-bottom: 1rem;
@@ -715,6 +699,7 @@ fieldset {
   padding: 1rem;
 }
 
+/*parte en arbol*/
 #formulario-contacto {
   margin: 2rem;
 }
@@ -725,9 +710,26 @@ fieldset {
   background-color: #31c5b7;
   padding: 1rem;
   border-radius: 20px;
+  /*Parte responsiva para pantallas medianas y grandes*/
 }
 #formulario-contacto form #primera-parte-formulario #datos-cliente #edad {
   width: 50px;
+}
+#formulario-contacto form #primera-parte-formulario #forma-contacto-cliente #contacto {
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  #formulario-contacto form {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+  #formulario-contacto form #motivo-consulta textarea {
+    height: 300px;
+  }
+  #formulario-contacto form .boton-contacto {
+    margin: 0 auto;
+  }
 }
 
 /*------------------------------------*/
@@ -875,6 +877,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
   /*Parte responsiva para pantallas medianas y grandes*/
 }
 @media screen and (min-width: 768px) {
@@ -916,11 +919,34 @@ fieldset {
   align-items: center;
 }
 
+#sesiones {
+  /*Parte responsiva a partir de 1000px*/
+}
 @media screen and (max-width: 1000px) {
   #sesiones {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #sesiones {
+    display: grid;
+    grid-template-areas: "titulo titulo" "parrafo imagen" "boton boton";
+    grid-template-columns: 1fr 1fr;
+  }
+  #sesiones .titulo {
+    grid-area: titulo;
+    text-align: center;
+  }
+  #sesiones #proceso-terapeutico {
+    grid-area: parrafo;
+  }
+  #sesiones img {
+    grid-area: imagen;
+  }
+  #sesiones .boton-contacto {
+    grid-area: boton;
   }
 }
 
@@ -933,6 +959,22 @@ fieldset {
 form {
   display: flex;
   flex-direction: column;
+  /*Parte responsiva para pantallas medianas y grandes*/
+}
+@media screen and (min-width: 1000px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  form #primera-parte-formulario {
+    grid-column: 1;
+  }
+  form #motivo-consulta {
+    grid-column: 2;
+  }
+  form .boton-contacto {
+    grid-column: 1/span 2;
+  }
 }
 
 #datos-cliente {
