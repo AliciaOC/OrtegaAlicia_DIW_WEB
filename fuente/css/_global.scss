@@ -599,4 +599,43 @@ footer {
     padding-bottom: 3rem;
   }
 }
+/*Fin main PSICÓLOGA*/
+
+/*Main de CONTACTO*/
+input,
+textarea{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+textarea{
+  width: 100%;
+  overflow:hidden;
+  resize: none;/*Lo voy a hacer con js, así que lo desactivo aquí*/
+}
+fieldset{
+  border: none;
+  padding: 1rem;
+}
+#formulario-contacto{
+  margin: 2rem;
+  #titular-imagen-contacto{
+    img{
+      max-width: 100px;
+    }
+  }
+  form{
+    background-color: $verde;
+    padding: 1rem;
+    border-radius: 20px;
+    #primera-parte-formulario{
+      #datos-cliente{
+        #edad{
+          width: 50px;
+        }
+      }
+    }
+  }
+}
 

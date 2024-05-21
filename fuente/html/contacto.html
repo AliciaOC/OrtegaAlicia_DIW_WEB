@@ -13,6 +13,7 @@
     />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="../js/hamburguesa.js" defer></script>
+    <script src="../js/textarea-contacto.js" defer></script>
   </head>
   <body>
     <header>
@@ -56,7 +57,7 @@
       <section id="formulario-contacto">
         <article id="titular-imagen-contacto">
           <h5 class="titulo">Formulario de contacto</h5>
-          <img src="../imagenes/sobre-200.webp" alt="imagen de un sobre" />
+          <img src="../imagenes/sobre-100.webp" alt="imagen de un sobre" />
         </article>
         <form>
           <div id="primera-parte-formulario">
@@ -72,7 +73,7 @@
                 required
               />
               <label class="casilla-formulario" for="edad">Edad:</label>
-              <input type="number" id="edad" name="edad" required />
+              <input type="number" id="edad" name="edad" min="0" required />
             </fieldset>
             <fieldset id="forma-contacto-cliente">
               <legend>Forma de Contacto</legend>

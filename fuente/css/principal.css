@@ -579,6 +579,42 @@ footer #contenedor-footer section {
   padding-bottom: 3rem;
 }
 
+/*Fin main PSICÓLOGA*/
+/*Main de CONTACTO*/
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  overflow: hidden;
+  resize: none; /*Lo voy a hacer con js, así que lo desactivo aquí*/
+}
+
+fieldset {
+  border: none;
+  padding: 1rem;
+}
+
+#formulario-contacto {
+  margin: 2rem;
+}
+#formulario-contacto #titular-imagen-contacto img {
+  max-width: 100px;
+}
+#formulario-contacto form {
+  background-color: #31c5b7;
+  padding: 1rem;
+  border-radius: 20px;
+}
+#formulario-contacto form #primera-parte-formulario #datos-cliente #edad {
+  width: 50px;
+}
+
 /*------------------------------------*/
 /*A partir de aquí apareceran las partes que correspondan con flex o grid*/
 /*------------------------------------*/
@@ -741,6 +777,22 @@ footer #contenedor-footer section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/*Contacto*/
+#titular-imagen-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#datos-cliente {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Footer*/
