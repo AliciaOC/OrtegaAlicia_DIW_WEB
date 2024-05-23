@@ -75,6 +75,7 @@ body {
 
 /*Aplicable a todos los botones CTA de la página*/
 .boton-contacto {
+  width: 150;
   height: -moz-fit-content;
   height: fit-content;
   border: none;
@@ -82,6 +83,9 @@ body {
   background-color: #afe4f3;
   border-radius: 32px;
   cursor: pointer;
+  text-decoration: none;
+  color: #031a03;
+  font-family: "Lexend";
 }
 .boton-contacto:active, .boton-contacto:hover {
   transition: 0.2s all;
@@ -102,10 +106,10 @@ body {
   font-size: larger;
 }
 
-/*Todos lo .titulos verdes menos algunos del carrusel*/
+/*Todos lo .titulos azules menos algunos del carrusel*/
 section h5,
 article h5 {
-  color: #31c5b7;
+  color: #065f88;
 }
 
 /*Lo ssubtitulos de terapias y psicologa*/
@@ -438,21 +442,21 @@ footer #contenedor-footer section {
   /*para pantallas medianas y grandes*/
 }
 #terapeuta-home h5 {
-  color: #31c5b7;
+  color: #065f88;
   font-size: larger;
 }
 #terapeuta-home #texto_terapeuta_home p {
   text-align: center;
   padding: 1rem;
   font-family: "Lexend", "sans-serif", "Comfortaa";
-  color: #065f88;
+  color: #031a03;
 }
 @media screen and (min-width: 1000px) {
   #terapeuta-home picture {
     padding-left: 1rem;
   }
   #terapeuta-home h5 {
-    color: #31c5b7;
+    color: #065f88;
     font-size: large;
     margin-bottom: 0;
     text-align: center;
@@ -460,7 +464,7 @@ footer #contenedor-footer section {
   #terapeuta-home #texto_terapeuta_home {
     padding: 0 2rem;
   }
-  #terapeuta-home button {
+  #terapeuta-home .boton-contacto {
     margin: 0 auto;
   }
 }
@@ -471,19 +475,20 @@ footer #contenedor-footer section {
   margin: 2rem;
 }
 #contactos_home h5 {
-  color: #31c5b7;
+  color: #065f88;
   font-size: larger;
 }
 #contactos_home .formas_contacto p,
 #contactos_home .formas_contacto a {
-  color: #065f88;
+  color: #031a03;
 }
-#contactos_home button {
+#contactos_home .boton-contacto {
+  margin: 0 auto;
   margin-bottom: 1rem;
   /*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
 }
 @media screen and (max-width: 1000px) {
-  #contactos_home button {
+  #contactos_home .boton-contacto {
     display: none;
   }
 }
@@ -718,6 +723,9 @@ fieldset {
 #formulario-contacto form #primera-parte-formulario #forma-contacto-cliente #contacto {
   width: 100%;
 }
+#formulario-contacto form .boton-contacto {
+  width: 120px;
+}
 @media screen and (min-width: 1000px) {
   #formulario-contacto form {
     max-width: 1000px;
@@ -834,7 +842,7 @@ fieldset {
   #terapeuta-home #texto_terapeuta_home {
     grid-area: texto;
   }
-  #terapeuta-home button {
+  #terapeuta-home .boton-contacto {
     grid-area: cta;
     align-self: start;
   }
@@ -861,7 +869,7 @@ fieldset {
     grid-column: 1;
     grid-row: 2;
   }
-  #contactos_home button {
+  #contactos_home .boton_contacto {
     grid-column: 1;
     grid-row: 3;
     margin: 0 auto;

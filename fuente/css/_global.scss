@@ -84,12 +84,17 @@ body {
 
 /*Aplicable a todos los botones CTA de la página*/
 .boton-contacto {
+  width: 150;
   height: fit-content;
   border: none;
   padding: 1rem 2rem;
   background-color: $azul-claro;
   border-radius: 32px;
   cursor: pointer;
+  text-decoration: none;
+  color: $negro;
+  font-family: $fuente-texto;
+  ;
 
   &:active,
   &:hover {
@@ -110,10 +115,10 @@ body {
 .titulo {
   font-size: larger;
 }
-/*Todos lo .titulos verdes menos algunos del carrusel*/
+/*Todos lo .titulos azules menos algunos del carrusel*/
 section h5, 
 article h5{
-  color: $verde;
+  color: $azul-oscuro;
 }
 
 /*Lo ssubtitulos de terapias y psicologa*/
@@ -443,7 +448,7 @@ footer {
   margin: 2rem;
 
   h5 {
-    color: $verde;
+    color: $azul-oscuro;
     font-size: larger;
   }
 
@@ -451,7 +456,7 @@ footer {
     text-align: center;
     padding: 1rem;
     font-family: "Lexend", "sans-serif", "Comfortaa";
-    color: #065f88;
+    color: $negro;
   }
 
   /*para pantallas medianas y grandes*/
@@ -460,7 +465,7 @@ footer {
     padding-left: 1rem;
   }
   h5 {
-    color: #31c5b7;
+    color: $azul-oscuro;
     font-size: large;
     margin-bottom: 0;
     text-align: center;
@@ -468,7 +473,7 @@ footer {
   #texto_terapeuta_home {
     padding: 0 2rem;
   }
-  button {
+  .boton-contacto {
     margin: 0 auto;
   }
 }
@@ -480,16 +485,17 @@ footer {
   margin: 2rem;
 
   h5 {
-    color: $verde;
+    color: $azul-oscuro;
     font-size: larger;
   }
 
   .formas_contacto p,
   .formas_contacto a {
-    color: $azul-oscuro;
+    color: $negro;
   }
 
-  button {
+  .boton-contacto {
+    margin: 0 auto;
     margin-bottom: 1rem;
     /*oculto el boton del apartado de contacto cuando es una pantalla de movil*/
     @include mixin-media-query-MAX(m-g){
@@ -745,6 +751,9 @@ fieldset{
       #forma-contacto-cliente #contacto{
         width: 100%;      
       }
+    }
+    .boton-contacto{
+      width: 120px;
     }
     /*Parte responsiva para pantallas medianas y grandes*/
     @include mixin-media-query-MIN(m-g){
